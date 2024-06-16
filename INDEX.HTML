@@ -17,8 +17,53 @@
             <a class= "cabecalho__menu__link" href="">Equipe</a>
         </nav>
     </header>
-    <main class="">
-        
+    <main class="container">
+        <section class="formulario">
+            <form class="principal__formulario" data-formulario>
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="nome">Seu nome de usuário:</label>
+                    <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required/>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="email">Seu e-mail:</label>
+                    <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required/>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="senha">Senha:</label>
+                    <input name="senha" id="senha" class="campo__escrita" type="password" minlength="8" maxlength="8" required/>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="confirmarSenha">Confirme sua senha:</label>
+                    <input name="confirmarSenha" id="confirmarSenha" class="campo__escrita" type="password" minlength="4" required/>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="formulario__termos">
+                    <input name="termos" class="termos__input" type="checkbox" required>
+                    <p class="termos__texto">Permito compartilhar meu nome de usuário no jogo.</p>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <div>
+                    <a class="formulario__recuperaSenha" href="#">Esqueci minha senha</a>
+                </div>
+                <div>
+                    <input value="Cadastre-se e receba o jogo" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
+                    <span class="mensagem-erro"></span>
+                </div>
+            </form>
+
+            <div class="descricao__formulario">
+                <h2 class="formulario__titulo">Entre nessa jornada!</h2>
+                <p class="formulario__texto">
+                    Colete informações e itens para encontrar os experimentos! 
+                    Apesar do perigo, a universidade não está vazia. 
+                    Vem encontrar professores e alunos para obter informações 
+                    importantes para seu progresso e entrar no ranking dos melhores!
+                </p>
+            </div>
+        </section>
     </main>
     <footer class="rodape">
         <p></p>
