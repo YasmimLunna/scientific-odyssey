@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientific Odyssey</title>
-   <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <header class= "cabecalho">
@@ -21,12 +21,12 @@
         <section class="formulario">
             <form class="principal__formulario" data-formulario>
                 <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="nome">Seu nome de usuário:</label>
-                    <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required/>
+                    <label class="campo__etiqueta" for="nome">Nome de usuário</label>
+                    <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$" required/>
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="email">Seu e-mail:</label>
+                    <label class="campo__etiqueta" for="email">E-mail:</label>
                     <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required/>
                     <span class="mensagem-erro"></span>
                 </fieldset>
@@ -37,7 +37,7 @@
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="confirmarSenha">Confirme sua senha:</label>
-                    <input name="confirmarSenha" id="confirmarSenha" class="campo__escrita" type="password" minlength="4" required/>
+                    <input name="confirmarSenha" id="confirmarSenha" class="campo__escrita" type="password" minlength="8" maxlength="8" required/>
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__termos">
@@ -46,16 +46,16 @@
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <div>
-                    <a class="formulario__recuperaSenha" href="#">Esqueci minha senha</a>
+                    <input value="Enviar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
+                    <span class="mensagem-erro"></span>
                 </div>
                 <div>
-                    <input value="Cadastre-se e receba o jogo" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
-                    <span class="mensagem-erro"></span>
+                    <a class="formulario__recuperaSenha" href="#">Esqueci minha senha</a>
                 </div>
             </form>
 
             <div class="descricao__formulario">
-                <h2 class="formulario__titulo">Entre nessa jornada!</h2>
+                <h3 class="formulario__titulo">Entre nessa jornada!</h2>
                 <p class="formulario__texto">
                     Colete informações e itens para encontrar os experimentos! 
                     Apesar do perigo, a universidade não está vazia. 
@@ -68,5 +68,6 @@
     <footer class="rodape">
         <p></p>
     </footer>
+    <script src="./js/script.js" type="module"></script>
 </body>
 </html>
