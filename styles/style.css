@@ -1,3 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Allerta&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #744680;
+    --cor-secundaria: #EEEEEE;
+    --cor-terciaria: #BA8BC7;
+    --cor-hover: #3D4142;
+
+    --font-primaria: 'Urbanist', sans-serif;
+    --font-secundaria: 'Allerta', sans-serif;
+    --font-terciaria: 'Aclonica', sans-serif;
+}
+
 .mensagem-erro {
     color: red;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+main {
+    flex: 1;
+    padding: 2% 15%;
+    padding-top: calc(2% + 2rem);
+    background-size: contain;
+    background-position: center;
+}
+
+.cabecalho {
+    position: fixed;
+    background-color: var(--cor-primaria);
+    width: 100%;
+    padding: 2% 10% 2% 10%;
+    border-bottom: 2.2px solid var(--cor-terciaria);
+    z-index: 1000;
+}
+
+.cabecalho__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--font-terciaria);
+    font-weight: 300;
+    font-size: 1.125rem;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-left: 15px;
+}
+
+.cabecalho__menu__link:first-child {
+    margin-right: auto;
+    margin-left: 10px;
+    position: relative;
+}
+
+.cabecalho__menu__link.current {
+    color: var(--cor-terciaria);
+    font-weight: 400;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-terciaria);
+}
+
+.titulo-jogo {
+    color: var(--cor-secundaria);
+    font-family: var(--font-terciaria);
+    font-weight: 400;
+}
+
+h2, h3 {
+    color: var(--cor-secundaria);
+    font-family: var(--font-primaria);
+    font-weight: 400;
+}
+
+p {
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    font-weight: 300;
+    font-size: 1rem;
 }
