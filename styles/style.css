@@ -16,8 +16,8 @@
 }
 
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -25,25 +25,26 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url('/assets/cenario.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
 
 main {
-    flex: 1;
-    padding: 2% 15%;
+    display: flex;
+    padding: 2% 10%;
     padding-top: calc(2% + 2rem);
-    background-size: contain;
-    background-position: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 80px;
 }
 
 .cabecalho {
-    position: fixed;
-    background-color: var(--cor-primaria);
     width: 100%;
     padding: 2% 10% 2% 10%;
-    border-bottom: 2.2px solid var(--cor-terciaria);
-    z-index: 1000;
 }
 
 .cabecalho__menu {
@@ -65,12 +66,6 @@ main {
 .cabecalho__menu__link:first-child {
     margin-right: auto;
     margin-left: 10px;
-    position: relative;
-}
-
-.cabecalho__menu__link.current {
-    color: var(--cor-terciaria);
-    font-weight: 400;
 }
 
 .cabecalho__menu__link:hover {
@@ -78,13 +73,15 @@ main {
 }
 
 .titulo-jogo {
+    display: flex;
+    justify-content: center;
     color: var(--cor-secundaria);
     font-family: var(--font-terciaria);
     font-weight: 400;
 }
 
 h2, h3 {
-    color: var(--cor-secundaria);
+    color: var (--cor-secundaria);
     font-family: var(--font-primaria);
     font-weight: 400;
 }
@@ -94,4 +91,45 @@ p {
     font-family: var(--font-secundaria);
     font-weight: 300;
     font-size: 1rem;
+}
+
+.sobre, .como-jogar, .ciencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sobre__content, .tutorial-container, .ciencia__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.sobre__text, .sobre__images, .tutorial__imagem, .tutorial__texto, .tutorial__video, .ciencia__texto, .ciencia__image {
+    flex: 1;
+}
+
+.sobre__text, .tutorial__texto, .ciencia__texto {
+    padding: 10px;
+}
+
+.sobre__images, .tutorial__imagem, .ciencia__image {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.sobre img, .tutorial__imagem img, .ciencia img {
+    max-width: 50%;
+    height: auto;
+}
+
+.titulo-secao {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    width: 100%;
 }

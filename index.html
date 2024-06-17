@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientific Odyssey</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./assets/Logo XP.svg" type="image/x-icon">
 </head>
 <body>
     <header class= "cabecalho">
@@ -23,31 +24,34 @@
     <main class="container">
         <h1 class="titulo-jogo">
             Scientific Odyssey
-        <img src="assets/cenario.svg" alt="Dra Carla no laboratório interagindo com uma molécula verde">
         </h1>
             
         <section class="sobre">
             <h2 class="titulo-secao">
                 SOBRE
             </h2>
-            <div class="sobre__text">
-                <p>
-                    Prepare-se para começar uma jornada
-                    com a Dra. Carla pela Universidade
-                    Armageddon e salvá-la de experimentos
-                    altamente perigosos.
-                </p>
-                <p>
-                    Você vai precisar usar conhecimentos
-                    de áreas específicas — Química, Física
-                    e Biologia — para desvendar todos os
-                    puzzles e utilizar as armas fabricadas
-                    para derrotar seus inimigos!
-                </p>
-            </div>   
-            <img src="assets/Dra Carla.svg" alt="Dra Carla que é preta, usando um jaleco branco de cientista, um sapato branco e um óculos preto">
-            <img src="assets/OBJECTS (1).png" alt="Cilindro de ampola com laranja e verde translúcido e brilhante atras da Dra Carla">
-        </section>
+            <div class="sobre__content">
+                <div class="sobre__text">
+                    <p>
+                        Prepare-se para começar uma jornada
+                        com a Dra. Carla pela Universidade
+                        Armageddon e salvá-la de experimentos
+                        altamente perigosos.
+                    </p>
+                    <p>
+                        Você vai precisar usar conhecimentos
+                        de áreas específicas — Química, Física
+                        e Biologia — para desvendar todos os
+                        puzzles e utilizar as armas fabricadas
+                        para derrotar seus inimigos!
+                    </p>
+                </div>   
+                <div class="sobre__images">
+                    <img src="assets/Dra Carla.svg" alt="Dra Carla que é preta, usando um jaleco branco de cientista, um sapato branco e um óculos preto">
+                    <img src="assets/OBJECTS (1).png" alt="Cilindro de ampola com laranja e verde translúcido e brilhante atras da Dra Carla">
+                </div>
+            </div>
+        </section>           
 
         <section class="como-jogar">
             <h2 class="titulo-secao">COMO JOGAR!</h2>
@@ -66,25 +70,29 @@
                 <div class="tutorial__video">
                     <video width="320" height="240" controls>
                         <source src=".mp4" type="video/mp4">
-//Falta o vídeo aqui
+                        <!-- Falta o vídeo aqui -->
                     </video>
                 </div>
             </div>
-        </section>
+        </section>        
             
         <section class="ciencia">
-            <h2 class="titulo-secao">
-                Você sabe o que é Ciência Colaborativa?
-            </h2>
-            <img src="assets/objetos de laboratorio.svg" alt="Materiais de laboratório de Química, balão volumétrico, um microscópio e tubos de ensaio">
-            <p class="ciencia__texto">
-                Ela nada mais é do que a
-                Investigação científica feita por um
-                conjunto de colaboradores que não
-                são necessariamente cientistas, compartilhando
-                recursos intelectuais, econômicos e/ou físicos.
-            </p>
-        </section>
+            <h2 class="titulo-secao">Você sabe o que é Ciência Colaborativa?</h2>
+            <div class="ciencia__content">
+                <div class="ciencia__image">
+                    <img src="assets/objetos de laboratorio.svg" alt="Materiais de laboratório de Química, balão volumétrico, um microscópio e tubos de ensaio">
+                </div>
+                <div class="ciencia__texto">
+                    <p>
+                        Ela nada mais é do que a
+                        Investigação científica feita por um
+                        conjunto de colaboradores que não
+                        são necessariamente cientistas, compartilhando
+                        recursos intelectuais, econômicos e/ou físicos.
+                    </p>
+                </div>
+            </div>
+        </section>             
 
         <section class="formulario">
             <form class="principal__formulario" data-formulario>
