@@ -25,7 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('/assets/cenario.svg');
+    background-image: url('../assets/cenario.svg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
@@ -39,18 +39,20 @@ main {
     padding-top: calc(2% + 2rem);
     align-items: center;
     flex-direction: column;
-    row-gap: 80px;
+    row-gap: 70px;
+    margin-top: 30%;
 }
 
 .cabecalho {
-    width: 100%;
-    padding: 2% 10% 2% 10%;
+    display: flex;
+    justify-content: center;
+    padding: 2% 10%;
 }
 
 .cabecalho__menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 12px;
 }
 
 .cabecalho__menu__link {
@@ -60,12 +62,30 @@ main {
     color: var(--cor-secundaria);
     text-decoration: none;
     transition: color 0.3s;
-    margin-left: 15px;
+    padding: 14px 20px;
+    background-color: var(--cor-primaria);
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: -2px 2px var(--cor-secundaria);
+    margin-left: 10px;
 }
 
-.cabecalho__menu__link:first-child {
-    margin-right: auto;
-    margin-left: 10px;
+.cta-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.cabecalho__menu__link.cta {
+    background-color: #4f2a58;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 25px;
+}
+
+.cta:hover {
+    transform: scale(1.05);
 }
 
 .cabecalho__menu__link:hover {
@@ -73,17 +93,44 @@ main {
 }
 
 .titulo-jogo {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     color: var(--cor-secundaria);
     font-family: var(--font-terciaria);
     font-weight: 400;
 }
 
+.titulo-jogo + .cta-wrapper {
+    margin-top: 20px;
+}
+
 h2, h3 {
-    color: var (--cor-secundaria);
+    color: var(--cor-secundaria);
     font-family: var(--font-primaria);
-    font-weight: 400;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+h2::after, h3::after, .formulario__titulo::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: var(--cor-terciaria);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.ciencia p, .sobre p {
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    font-weight: 300;
+    font-size: 1rem;
+    background-color: var(--cor-terciaria);
+    padding: 10% 5%;
+    line-height: 1.5;
+    border-radius: 10px;
 }
 
 p {
@@ -91,29 +138,47 @@ p {
     font-family: var(--font-secundaria);
     font-weight: 300;
     font-size: 1rem;
+    padding: 10% 5%;
+    line-height: 1.5;
 }
 
-.sobre, .como-jogar, .ciencia {
+.sobre, .como-jogar, .ciencia, .formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.sobre__content, .tutorial-container, .ciencia__content {
+.jogar-titulo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.jogar-titulo::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: var(--cor-primaria);
+    position: absolute;
+    bottom: -10px;
+    left: 94%;
+}
+
+.sobre__content, .tutorial-content, .ciencia__content, .formulario__content, .equipe__content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
     max-width: 1200px;
 }
 
-.sobre__text, .sobre__images, .tutorial__imagem, .tutorial__texto, .tutorial__video, .ciencia__texto, .ciencia__image {
+.sobre__text, .sobre__images, .tutorial__imagem, .tutorial__texto, .tutorial__video, .ciencia__texto, .ciencia__image, .formulario__texto, .formulario__form, .equipe__texto, .equipe__image {
     flex: 1;
 }
 
-.sobre__text, .tutorial__texto, .ciencia__texto {
+.sobre__text, .tutorial__texto, .ciencia__texto, .formulario__texto {
     padding: 10px;
 }
 
@@ -121,15 +186,113 @@ p {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    justify-content: center;
 }
 
-.sobre img, .tutorial__imagem img, .ciencia img {
-    max-width: 50%;
+.sobre img {
+    max-width: 40%;
+    height: auto;
+}
+
+.tutorial-subcontent {
+    margin-top: -90px;
+}
+
+.tutorial__imagem img {
+    max-width: 40%;
+    height: auto;
+}
+
+.ciencia img {
+    max-width: 60%;
     height: auto;
 }
 
 .titulo-secao {
-    margin-bottom: 20px;
     font-size: 2rem;
     width: 100%;
+    text-align: left;
 }
+.tutorial__video {
+    margin-left: 20%;
+}
+
+.como-jogar {
+    background-color: var(--cor-terciaria);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 5% 15%;
+    margin: 0;
+}
+
+.ciencia__content {
+    flex-direction: row-reverse;
+    margin-top: 2%;
+}
+
+.formulario {
+    background-color: var(--cor-terciaria);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 14%;
+    margin: 0;
+}
+
+.formulario__titulo {
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.equipe {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.equipe__design, .equipe__front {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.equipe__jogos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.equipe__dados, .equipe__back {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.equipe__titulo {
+    margin-top: 0;
+}
+
+.equipe img {
+    max-width: 100px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.rodape {
+    display: flex;
+    padding: 24px;
+    background-color: var(--cor-hover);
+    flex-direction: row;
+    justify-content: space-around;
+  }
