@@ -8,106 +8,120 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./assets/Logo XP.svg" type="image/x-icon">
 </head>
+
 <body>
-    <header class= "cabecalho">
-        <nav class= "cabecalho__menu">
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
             <img src="assets/Logo XP.svg" alt="Logo do XP Studio que é a empresa criadora do site/jogo">
             <a class="cabecalho__menu__link" href="#sobre">Sobre</a>
             <a class="cabecalho__menu__link" href="#como-jogar">Como Jogar</a>
             <a class="cabecalho__menu__link" href="#ciencia">Ciência</a>
             <a class="cabecalho__menu__link" href="#cadastro">Cadastro</a>
             <a class="cabecalho__menu__link" href="#equipe">Equipe</a>
-            <a class="cabecalho__menu__link" href="#jogue-agora">Jogue Agora</a>
-        </nav>
         </nav>
     </header>
+    <h1 class="titulo-jogo">
+        Scientific Odyssey
+    </h1>
+    <div class="cta-wrapper">
+        <a class="cabecalho__menu__link cta" href="#jogue-agora">Jogue Agora</a>
+    </div>
     <main class="container">
-        <h1 class="titulo-jogo">
-            Scientific Odyssey
-        <img src="assets/cenario.svg" alt="Dra Carla no laboratório interagindo com uma molécula verde">
-        <button type="button" class="btn-game">Jogue Agora</button>
-        </h1>
-            
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <h2 class="titulo-secao">
                 SOBRE
             </h2>
-            <div class="sobre__text">
-                <p>
-                    Prepare-se para começar uma jornada
-                    com a Dra. Carla pela Universidade
-                    Armageddon e salvá-la de experimentos
-                    altamente perigosos.
-                </p>
-                <p>
-                    Você vai precisar usar conhecimentos
-                    de áreas específicas — Química, Física
-                    e Biologia — para desvendar todos os
-                    puzzles e utilizar as armas fabricadas
-                    para derrotar seus inimigos!
-                </p>
-            </div>   
-            <img src="assets/Dra Carla.svg" alt="Dra Carla que é preta, usando um jaleco branco de cientista, um sapato branco e um óculos preto">
-            <img src="assets/OBJECTS (1).png" alt="Cilindro de ampola com laranja e verde translúcido e brilhante atras da Dra Carla">
+            <div class="sobre__content">
+                <div class="sobre__text">
+                    <p class="sobre p">
+                        Prepare-se para começar uma jornada
+                        com a Dra. Carla pela Universidade
+                        Armageddon e salvá-la de experimentos
+                        altamente perigosos. <br>
+
+                        Você vai precisar usar conhecimentos
+                        de áreas específicas — Química, Física
+                        e Biologia — para desvendar todos os
+                        puzzles e utilizar as armas fabricadas
+                        para derrotar seus inimigos!
+                    </p>
+                </div>
+                <div class="sobre__images">
+                    <img src="assets/Dra Carla.svg"
+                        alt="Dra Carla que é preta, usando um jaleco branco de cientista, um sapato branco e um óculos preto">
+                    <img src="assets/OBJECTS (1).png"
+                        alt="Cilindro de ampola com laranja e verde translúcido e brilhante atrás da Dra Carla">
+                </div>
+            </div>
         </section>
 
-        <section class="como-jogar">
-            <h2 class="titulo-secao">COMO JOGAR!</h2>
-            <div class="tutorial-container">
-                <div class="tutorial__imagem">
-                   <img src="assets/OBJECTS.svg" alt="Um caderno, um erlenmeyer e um becker"> 
-                </div>
-                <div class="tutorial__texto">
-                    <p>
-                        Assista o tutorial
-                        em vídeo e
-                        prepare-se para
-                        a aventura!
-                    </p>
+        <section class="como-jogar" id="como-jogar">
+            <h2 class="titulo-secao jogar-titulo">COMO JOGAR!</h2>
+            <div class="tutorial-content">
+                <div class="tutorial-subcontent">
+                    <div class="tutorial__texto">
+                        <p>
+                            Assista o tutorial
+                            em vídeo e
+                            prepare-se para
+                            a aventura!
+                        </p>
+                    </div>
+                    <div class="tutorial__imagem">
+                        <img src="assets/OBJECTS.svg" alt="Um caderno, um erlenmeyer e um becker">
+                    </div>
                 </div>
                 <div class="tutorial__video">
                     <video width="320" height="240" controls>
                         <source src=".mp4" type="video/mp4">
-//Falta o vídeo aqui
+                        <!-- Falta o vídeo aqui -->
                     </video>
                 </div>
             </div>
         </section>
-            
-        <section class="ciencia">
-            <h2 class="titulo-secao">
-                Você sabe o que é Ciência Colaborativa?
-            </h2>
-            <img src="assets/objetos de laboratorio.svg" alt="Materiais de laboratório de Química, balão volumétrico, um microscópio e tubos de ensaio">
-            <p class="ciencia__texto">
-                Ela nada mais é do que a
-                Investigação científica feita por um
-                conjunto de colaboradores que não
-                são necessariamente cientistas, compartilhando
-                recursos intelectuais, econômicos e/ou físicos.
-            </p>
+
+        <section class="ciencia" id="ciencia">
+            <h2 class="titulo-secao">Você sabe o que é Ciência Colaborativa?</h2>
+            <div class="ciencia__content">
+                <div class="ciencia__image">
+                    <img src="assets/objetos de laboratorio.svg"
+                        alt="Materiais de laboratório de Química, balão volumétrico, um microscópio e tubos de ensaio">
+                </div>
+                <div class="ciencia__texto">
+                    <p class="ciencia p">
+                        Ela nada mais é do que a
+                        Investigação científica feita por um
+                        conjunto de colaboradores que não
+                        são necessariamente cientistas, compartilhando
+                        recursos intelectuais, econômicos e/ou físicos.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section class="formulario">
+        <section class="formulario" id="cadastro">
             <form class="principal__formulario" data-formulario>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="nome">Nome de usuário</label>
-                    <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$" required/>
+                    <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3"
+                        pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$" required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="email">E-mail:</label>
-                    <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required/>
+                    <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="senha">Senha:</label>
-                    <input name="senha" id="senha" class="campo__escrita" type="password" minlength="8" maxlength="8" required/>
+                    <input name="senha" id="senha" class="campo__escrita" type="password" minlength="8" maxlength="8"
+                        required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <label class="campo__etiqueta" for="confirmarSenha">Confirme sua senha:</label>
-                    <input name="confirmarSenha" id="confirmarSenha" class="campo__escrita" type="password" minlength="8" maxlength="8" required/>
+                    <input name="confirmarSenha" id="confirmarSenha" class="campo__escrita" type="password"
+                        minlength="8" maxlength="8" required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
                 <fieldset class="formulario__termos">
@@ -124,7 +138,7 @@
                 </div>
             </form>
             <div class="descricao__formulario">
-                <h2 class="formulario__titulo">Entre nessa jornada!</h3>
+                <h2 class="formulario__titulo">Entre nessa jornada!</h2>
                 <p class="formulario__texto">
                     Colete informações e itens para encontrar os experimentos!
                     Apesar do perigo, a universidade não está vazia.
@@ -133,11 +147,11 @@
                 </p>
             </div>
             <div class="imagem__formulario">
-              <img src="assets/rato mutante.svg" alt="Um rato roxo mutante">
+                <img src="assets/rato mutante.svg" alt="Um rato roxo mutante">
             </div>
         </section>
 
-        <section class="equipe">
+        <section class="equipe" id="equipe">
             <h2 class="titulo-secao">
                 QUEM é a XP STUDIO?
             </h2>
@@ -173,7 +187,7 @@
                 <p>Marcelo Henrique Bastos Rodrigues</p>
                 <p>Karmaykell Chagas Silva</p>
                 <p>Erika Beatriz Martins Sousa</p>
-                <p>Maykon Bogéa Martins</p>
+                <p>Maykon Bogéa Martins</p>                
                 <p>Mariana De Sousa Lopes</p>
             </div>
             <img src="assets/Logo XP.svg" alt="Logo do XP Studio que é a empresa criadora do site/jogo">
