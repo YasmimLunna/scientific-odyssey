@@ -11,90 +11,91 @@
 
 <body>
     <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <img src="assets/Logo XP.svg" alt="Logo do XP Studio que é a empresa criadora do site/jogo">
-            <a class="cabecalho__menu__link" href="#sobre">Sobre</a>
-            <a class="cabecalho__menu__link" href="#como-jogar">Como Jogar</a>
-            <a class="cabecalho__menu__link" href="#ciencia">Ciência</a>
-            <a class="cabecalho__menu__link" href="#cadastro">Cadastro</a>
-            <a class="cabecalho__menu__link" href="#equipe">Equipe</a>
-        </nav>
+        <div class="container-home">
+            <a href="#"><img src="./assets/logo.svg" alt="logo"></a>
+            <nav>
+                <ul class="menu">
+                    <li><a class="cabecalho__menu__link" href="#sobre">Sobre</a></li>
+                    <li><a class="cabecalho__menu__link" href="#como-jogar">Como Jogar</a></li>
+                    <li><a class="cabecalho__menu__link" href="#ciencia">Ciência</a></li>
+                    <li><a class="cabecalho__menu__link" href="#cadastro">Cadastro</a></li>
+                    <li><a class="cabecalho__menu__link" href="#equipe">Equipe</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content">
+            <h1 class="tittle-game">Scientific Odyssey</h1>
+            <button class="btn-start cta">Jogue Agora</button>
+        </div>
     </header>
-    <h1 class="titulo-jogo">
-        Scientific Odyssey
-    </h1>
-    <div class="cta-wrapper">
-        <a class="cabecalho__menu__link cta" href="#jogue-agora">Jogue Agora</a>
-    </div>
     <main class="container">
-        <section class="sobre" id="sobre">
-            <h2 class="titulo-secao">
-                SOBRE
-            </h2>
-            <div class="sobre__content">
-                <div class="sobre__text">
-                    <p class="sobre p">
-                        Prepare-se para começar uma jornada
-                        com a Dra. Carla pela Universidade
-                        Armageddon e salvá-la de experimentos
-                        altamente perigosos. <br>
-
-                        Você vai precisar usar conhecimentos
-                        de áreas específicas — Química, Física
-                        e Biologia — para desvendar todos os
-                        puzzles e utilizar as armas fabricadas
-                        para derrotar seus inimigos!
-                    </p>
-                </div>
-                <div class="sobre__images">
-                    <img src="assets/Dra Carla.svg"
-                        alt="Dra Carla que é preta, usando um jaleco branco de cientista, um sapato branco e um óculos preto">
-                    <img src="assets/OBJECTS (1).png"
-                        alt="Cilindro de ampola com laranja e verde translúcido e brilhante atrás da Dra Carla">
+        <section id="sobre">
+            <div class="about-game">
+                <h2 class="top-subtitle">sobre</h2>
+                <hr>
+                <div class="about-content">
+                    <div class="container-txt-about">
+                        <div class="txt-about">
+                            <p>Prepare-se para começar uma jornada com a Dra. Carla pela Universidade Armageddon e salvá-la de experimentos altamente perigosos.</p>
+                            <br>
+                            <p>Você vai precisar usar conhecimentos de áreas específicas — Química, Física e Biologia —  para desvendar todos os puzzles e utilizar as armas fabricadas para derrotar seus inimigos!</p>
+                        </div>
+                    </div>
+                    <div class="img-science">
+                        <img src="./assets/Dra Carla.svg" alt="science" class="science">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="como-jogar" id="como-jogar">
-            <h2 class="titulo-secao jogar-titulo">COMO JOGAR!</h2>
-            <div class="tutorial-content">
-                <div class="tutorial-subcontent">
-                    <div class="tutorial__texto">
-                        <p>
-                            Assista o tutorial
-                            em vídeo e
-                            prepare-se para
-                            a aventura!
-                        </p>
+        <section id="como-jogar">
+            <div class="container-game">
+                <h2 class="top-subtitle-game">COMO JOGAR!</h2>
+                <hr class="hr2">
+                <div class="tutorial-content">
+                    <div class="tutorial-subcontent">
+                        <div class="tutorial__texto">
+                            <p>
+                                Assista o tutorial<br>
+                                em vídeo e
+                                prepare-se para<br>
+                                a aventura!
+                            </p>
+                        </div>
+                        <div class="tutorial__imagem">
+                            <img src="assets/OBJECTS.svg" alt="Um caderno, um erlenmeyer e um becker" class="elements-science">
+                        </div>
                     </div>
-                    <div class="tutorial__imagem">
-                        <img src="assets/OBJECTS.svg" alt="Um caderno, um erlenmeyer e um becker">
+                    <div class="tutorial__video">
+                        <video width="450" height="280" controls>
+                            <source src=".mp4" type="video/mp4">
+                            
+                        </video>
                     </div>
-                </div>
-                <div class="tutorial__video">
-                    <video width="320" height="240" controls>
-                        <source src=".mp4" type="video/mp4">
-                        <!-- Falta o vídeo aqui -->
-                    </video>
                 </div>
             </div>
         </section>
 
-        <section class="ciencia" id="ciencia">
-            <h2 class="titulo-secao">Você sabe o que é Ciência Colaborativa?</h2>
-            <div class="ciencia__content">
-                <div class="ciencia__image">
-                    <img src="assets/objetos de laboratorio.svg"
-                        alt="Materiais de laboratório de Química, balão volumétrico, um microscópio e tubos de ensaio">
-                </div>
-                <div class="ciencia__texto">
-                    <p class="ciencia p">
-                        Ela nada mais é do que a
-                        Investigação científica feita por um
-                        conjunto de colaboradores que não
-                        são necessariamente cientistas, compartilhando
-                        recursos intelectuais, econômicos e/ou físicos.
-                    </p>
+        <section id="ciencia">
+            <div class="about-science">
+                <h2 class="subtittle-science">Você sabe o que é<br><span class="top-subtitle">Ciência Colaborativa?</span></h2>
+                <hr class="hr3">
+                <div class="ciencia__content about-content">
+                    <div class="ciencia__texto container-txt-about">
+                        <div class="txt-about-science">
+                            <p class="ciencia p">
+                                Ela nada mais é do que a
+                                Investigação científica feita por um
+                                conjunto de colaboradores que não
+                                são necessariamente cientistas, compartilhando
+                                recursos intelectuais, econômicos e/ou físicos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ciencia__image">
+                        <img src="assets/objetos de laboratorio.svg"
+                            alt="Materiais de laboratório de Química, balão volumétrico, um microscópio e tubos de ensaio" class="science-img">
+                    </div>
                 </div>
             </div>
         </section>
@@ -192,7 +193,7 @@
             </div>
             <img src="assets/Logo XP.svg" alt="Logo do XP Studio que é a empresa criadora do site/jogo">
         </section>
-    </main>
+    </main> 
     <footer class="rodape">
         <img src="assets/Ativo 9INOVA.png" alt="Logo da Inova">
         <img src="assets/logo secti com fundo branco-08.png" alt="Logo da SECTI com fundo branco">
