@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Allerta&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --cor-primaria: #744680;
-    --cor-secundaria: #EEEEEE;
-    --cor-terciaria: #4f2a58;
-    --cor-hover: #3D4142;
+    --cor-primaria: #D9BF66;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #666A73;
+    --cor-hover: #275b8a;
 
     --font-primaria: 'Urbanist', sans-serif;
     --font-secundaria: 'Allerta', sans-serif;
@@ -12,7 +12,10 @@
 }
 
 .mensagem-erro {
-    color: red;
+    color: rgb(255, 57, 57);
+    font-family: var(--font-primaria);
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 * {
@@ -30,32 +33,26 @@ body {
     background-position: top center;
     background-size: contain;
     background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
 }
 
 main {
     display: flex;
-    padding: 2% 15%;
-    align-items: center;
     flex-direction: column;
     row-gap: 70px;
-    margin-top: 8%;
 }
 
 /* HOME */
 
 .cabecalho {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; 
     padding: 2% 10%;
     align-items: center;
 }
 
 .cabecalho__logo {
-    max-width: 100px;
+    max-width: 130px;
     height: auto;
     margin: 0;
 }
@@ -74,7 +71,7 @@ main {
     text-decoration: none;
     transition: color 0.3s;
     padding: 14px 20px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
     border-radius: 15px;
     cursor: pointer;
     box-shadow: -2px 2px var(--cor-secundaria);
@@ -83,29 +80,23 @@ main {
 
 .cta-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    transition: transform 0.3s, opacity 0.3s;
-    margin-top: 25%;
-}
-
-.cabecalho__menu__link.cta {
-    color: white;
-    padding: 14px 28px;
-    border-radius: 15px;
+    margin-top: 24%;
 }
 
 .cta {
+    
     transition: transform 0.3s, opacity 0.3s;
 }
 
 .cta:hover {
     transform: scale(1.10);
-    background-color: #aa67bb;
+    background-color: var(--cor-secundaria);
 }
 
 .cabecalho__menu__link:hover {
-    color: var(--cor-terciaria);
+    color: var(--cor-primaria);
 }
 
 .titulo-jogo {
@@ -118,6 +109,12 @@ main {
 
 /* ALGUNS ESTILOS DE TÍTULO E PARÁGRAFO */
 
+.titulo-secao {
+    font-size: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
 h2, h3 {
     color: var(--cor-secundaria);
     font-family: var(--font-primaria);
@@ -129,8 +126,8 @@ h2, h3 {
 h2::after, h3::after {
     content: '';
     display: block;
-    width: 50px;
-    height: 5px;
+    width: 80px;
+    height: 6px;
     background-color: var(--cor-terciaria);
     position: absolute;
     bottom: -10px;
@@ -143,29 +140,58 @@ h2::after, h3::after {
 
 p {
     color: var(--cor-secundaria);
-    font-family: var(--font-secundaria);
-    font-weight: 300;
-    font-size: 1.1rem;
-    padding: 10% 5%;
+    font-family: var(--font-primaria);
+    font-weight: 500;
+    font-size: 1.2rem;
     line-height: 1.5;
+    padding: 0;
+    margin: 0;
 }
 
 /* CONTAINERS ROXOS */
 
-.ciencia p, .sobre p {
-    color: var(--cor-secundaria);
-    font-family: var(--font-secundaria);
-    font-weight: 300;
-    font-size: 1.1rem;
+.sobre__text, .ciencia__texto {
+    position: relative;
+    display: flex;
+    padding: 2% 5%;
     background-color: var(--cor-terciaria);
     box-shadow: -2px 2px 5px var(--cor-hover);
-    transition: transform 0.3s, opacity 0.3s;
-    padding: 10% 5%;
-    line-height: 1.5;
     border-radius: 10px;
+    width: 45%;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-.ciencia p:hover, .sobre p:hover {
+.sobre__text::before, .ciencia__texto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--cor-terciaria);
+    border-radius: 10px;
+    z-index: -1;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.sobre p, .ciencia p {
+    padding: 0;
+    margin: 10px 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.sobre__text:hover, .ciencia__texto:hover {
+    transform: scale(1.05);
+}
+
+.sobre__text:hover::before, .ciencia__texto:hover::before {
+    transform: scale(1.05);
+}
+
+.sobre__text:hover p, .ciencia__texto:hover p {
     transform: scale(1.05);
 }
 
@@ -173,119 +199,131 @@ p {
 
 .sobre, .como-jogar, .ciencia, .formulario {
     display: flex;
+    padding: 0% 9% 0%;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.jogar-titulo, .formulatio-titulo {
+.sobre {
+    margin-top: 14%;
+}
+
+.tutorial-content, .formulario__content {
     display: flex;
-    justify-content: flex-end;
-}
-
-.jogar-titulo::after, .formulatio-titulo::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 5px;
-    background-color: var(--cor-primaria);
-    position: absolute;
-    bottom: -10px;
-    left: 94%;
-}
-
-.formulatio-titulo::after {
-    left: 90%;
-}
-
-.sobre__content, .tutorial-content, .ciencia__content, .formulario__content, .equipe__content {
-    display: flex;
+    padding-bottom: 3rem;
     flex-direction: row;
+    margin-top: 2%;
     align-items: flex-start;
-    gap: 10px;
-    width: 100%;
-    max-width: 1200px;
+}
+
+.sobre__content {
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ciencia__content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sobre__images, .ciencia__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
 }
 
 .sobre__text, .sobre__images, .tutorial__imagem, .tutorial__texto, .tutorial__video, .ciencia__texto, .ciencia__image, .formulario__texto, .formulario__form, .equipe__texto, .equipe__image {
     flex: 1;
 }
 
-.sobre__text, .tutorial__texto, .ciencia__texto, .formulario__texto {
-    padding: 10px;
+.formulario__texto {
+    max-width: 70%;
+    text-align: right;
 }
 
-.sobre__images, .tutorial__imagem, .ciencia__image {
+.sobre__images img, .ciencia__image img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+.como-jogar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-terciaria);
+    padding: 5% 9% 0%;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.tutorial__video {
+    margin-left: 10%;
+}
+
+.tutorial__video video {
+    width: 450px;
+    height: 280px;
+}
+
+.tutorial-subcontent {
+    display: flex;
+    margin-top: -90px;
+    flex-direction: column;
+}
+
+.tutorial__imagem {
     display: flex;
     flex-direction: row;
+    max-width: 85%;
+    height: auto;
     gap: 10px;
     justify-content: center;
 }
 
-.sobre img {
-    max-width: 40%;
-    height: auto;
+.jogar-titulo, .formulatio-titulo {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
 }
 
-.tutorial-subcontent {
-    margin-top: -90px;
+.jogar-titulo::after, .formulatio-titulo::after {
+    width: 80px;
+    height: 6px;
+    background-color: var(--cor-primaria);
+    position: absolute;
+    bottom: -10px;
+    left: 92%;
 }
 
-.tutorial__imagem img {
-    max-width: 35%;
-    height: auto;
-}
-
-.ciencia img {
-    max-width: 60%;
-    height: auto;
-}
-
-.titulo-secao {
-    font-size: 2rem;
-    width: 100%;
-    text-align: left;
-}
-.tutorial__video {
-    margin-left: 10%;
-    margin-top: 5%;
-}
-
-.como-jogar {
-    background-color: var(--cor-terciaria);
-    width: 100vw;
-    padding: 8% 25%;
-    margin: 0;
-}
-
-.ciencia__content {
-    flex-direction: row-reverse;
-    margin-top: 2%;
+.formulatio-titulo::after {
+    left: 84%;
 }
 
 /* FORMULÁRIO */
 
 .formulario {
     background-color: var(--cor-terciaria);
-    width: 100vw;
-    padding: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.formulario__titulo::after {
-    background-color: var(--cor-primaria);
 }
 
 .formulario__content {
     display: flex;
-    width: 100%;
-    max-width: 1200px;
-    gap: 20px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    flex-direction: row;
+    margin-top: 2%;
     align-items: flex-start;
-    gap: 10%;
+    justify-content: flex-end;
+}
+
+.formulario__titulo::after {
+    background-color: var(--cor-primaria);
 }
 
 .principal__formulario {
@@ -303,6 +341,7 @@ p {
 
 .formulario__campo {
     margin-bottom: 15px;
+    margin-left: 15px;
 }
 
 .campo__etiqueta {
@@ -320,7 +359,7 @@ p {
     background-color: var(--cor-secundaria);
     font-family: var(--font-secundaria);
     font-size: 1.1rem;
-    color: var(--cor-primaria);
+    color: var(--cor-terciaria);
 }
 
 .formulario__termos {
@@ -357,7 +396,7 @@ p {
 }
 
 .formulario__botao:hover {
-    background-color: #aa67bb;
+    background-color: var(--cor-secundaria);
     color: var(--cor-terciaria);
 }
 
@@ -379,7 +418,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 150px;
+    gap: 80px;
 }
 
 .imagem__formulario {
@@ -389,8 +428,8 @@ p {
 .imagem__formulario img {
     max-width: 100%;
     height: auto;
-    margin-top: -220px;
-    margin-left: 620px;
+    margin-top: -240px;
+    margin-left: 920px;
 }
 
 fieldset {
@@ -408,11 +447,17 @@ fieldset {
     align-items: flex-start;
     padding: 20px;
     margin-top: -60px;
+    justify-items: center;
+    align-items: center;
 }
 
 .equipe__design,
 .equipe__front {
     grid-column: 1;
+}
+
+.equipe__design {
+    padding-right: 35px;
 }
 
 .equipe__jogos {
@@ -447,13 +492,13 @@ fieldset {
 }
 
 .equipe img {
-    max-width: 100px;
+    max-width: 160px;
     height: auto;
     margin-top: 20px;
     justify-self: center;
     grid-column: 2 / span 1;
     grid-row: 3;
-    margin-top: 20px;/
+    margin-top: 20px;
 }
 
 /* FOOTER */
