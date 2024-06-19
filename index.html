@@ -12,14 +12,17 @@
 
 <body>
     <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <img src="assets/Logo XP.svg" alt="Logo do XP Studio que é a empresa criadora do site/jogo">
-            <a class="cabecalho__menu__link" href="#sobre">Sobre</a>
-            <a class="cabecalho__menu__link" href="#como-jogar">Como Jogar</a>
-            <a class="cabecalho__menu__link" href="#ciencia">Ciência</a>
-            <a class="cabecalho__menu__link" href="#cadastro">Cadastro</a>
-            <a class="cabecalho__menu__link" href="#equipe">Equipe</a>
-        </nav>
+        <div class="cabecalho">
+            <img class="cabecalho__logo" src="assets/Logo XP.svg" alt="Logo do XP Studio que é a empresa criadora do site/jogo">
+            <nav class="cabecalho__menu">
+                <a class="cabecalho__menu__link" href="#sobre">Sobre</a>
+                <a class="cabecalho__menu__link" href="#como-jogar">Como Jogar</a>
+                <a class="cabecalho__menu__link" href="#ciencia">Ciência</a>
+                <a class="cabecalho__menu__link" href="#cadastro">Cadastro</a>
+                <a class="cabecalho__menu__link" href="#equipe">Equipe</a>
+            </nav>
+        </div>        
+        
     </header>
     <h1 class="titulo-jogo">
         Scientific Odyssey
@@ -101,61 +104,63 @@
         </section>
 
         <section class="formulario" id="cadastro">
-            <form class="principal__formulario" data-formulario>
-                <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="nome">Nome de usuário</label>
-                    <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3"
-                        pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$" required />
-                    <span class="mensagem-erro"></span>
-                </fieldset>
-                <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="email">E-mail:</label>
-                    <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required />
-                    <span class="mensagem-erro"></span>
-                </fieldset>
-                <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="senha">Senha:</label>
-                    <input name="senha" id="senha" class="campo__escrita" type="password" minlength="8" maxlength="8"
-                        required />
-                    <span class="mensagem-erro"></span>
-                </fieldset>
-                <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="confirmarSenha">Confirme sua senha:</label>
-                    <input name="confirmarSenha" id="confirmarSenha" class="campo__escrita" type="password"
-                        minlength="8" maxlength="8" required />
-                    <span class="mensagem-erro"></span>
-                </fieldset>
-                <fieldset class="formulario__termos">
-                    <input name="termos" class="termos__input" type="checkbox" required>
-                    <p class="termos__texto">Permito compartilhar meu nome de usuário no jogo.</p>
-                    <span class="mensagem-erro"></span>
-                </fieldset>
-                <div>
-                    <input value="Enviar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
-                    <span class="mensagem-erro"></span>
+            <div class="formulario__content">
+                <form class="principal__formulario" data-formulario>
+                    <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="nome">Nome de usuário</label>
+                        <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3"
+                            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$" required />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="email">E-mail:</label>
+                        <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="senha">Senha:</label>
+                        <input name="senha" id="senha" class="campo__escrita" type="password" minlength="8" maxlength="8"
+                            required />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <fieldset class="formulario__campo">
+                        <label class="campo__etiqueta" for="confirmarSenha">Confirme sua senha:</label>
+                        <input name="confirmarSenha" id="confirmarSenha" class="campo__escrita" type="password"
+                            minlength="8" maxlength="8" required />
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <fieldset class="formulario__termos">
+                        <input name="termos" class="termos__input" type="checkbox" required>
+                        <p class="termos__texto">Permito compartilhar meu nome de usuário no jogo.</p>
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    <div>
+                        <input value="Inscreva-se para receber o jogo!" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
+                        <span class="mensagem-erro"></span>
+                    </div>
+                    <div>
+                        <a class="formulario__recuperaSenha" href="#">Esqueci minha senha</a>
+                    </div>
+                </form>
+                <div class="descricao__formulario">
+                    <h2 class="titulo-secao formulatio-titulo">Entre nessa jornada!</h2>
+                    <p class="formulario__texto">
+                        Colete informações e itens para encontrar os experimentos!
+                        Apesar do perigo, a universidade não está vazia.
+                        Vem encontrar professores e alunos para obter informações
+                        importantes para seu progresso e entrar no ranking dos melhores!
+                    </p>
+                    </div>
                 </div>
-                <div>
-                    <a class="formulario__recuperaSenha" href="#">Esqueci minha senha</a>
-                </div>
-            </form>
-            <div class="descricao__formulario">
-                <h2 class="formulario__titulo">Entre nessa jornada!</h2>
-                <p class="formulario__texto">
-                    Colete informações e itens para encontrar os experimentos!
-                    Apesar do perigo, a universidade não está vazia.
-                    Vem encontrar professores e alunos para obter informações
-                    importantes para seu progresso e entrar no ranking dos melhores!
-                </p>
             </div>
-            <div class="imagem__formulario">
-                <img src="assets/rato mutante.svg" alt="Um rato roxo mutante">
-            </div>
-        </section>
+        </section>    
+
+        <div class="imagem__formulario">
+            <img src="assets/rato mutante.svg" alt="Um rato roxo mutante">
+        </div>
 
         <section class="equipe" id="equipe">
-            <h2 class="titulo-secao">
-                QUEM é a XP STUDIO?
-            </h2>
+            <h2 class="titulo-secao">QUEM é a XP STUDIO?</h2>
             <div class="equipe__design">
                 <h3 class="equipe__titulo">Design</h3>
                 <p>Samilla Ferreira Gusmão</p>
@@ -192,10 +197,10 @@
                 <p>Mariana De Sousa Lopes</p>
             </div>
             <img src="assets/Logo XP.svg" alt="Logo do XP Studio que é a empresa criadora do site/jogo">
-        </section>
+        </section>        
     </main>
     <footer class="rodape">
-        <img src="assets/Ativo 9INOVA.png" alt="Logo da Inova">
+        <img class="inova" src="assets/Ativo 9INOVA.png" alt="Logo da Inova">
         <img src="assets/logo secti com fundo branco-08.png" alt="Logo da SECTI com fundo branco">
     </footer>
     <script src="./js/script.js" type="module"></script>

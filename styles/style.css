@@ -3,7 +3,7 @@
 :root {
     --cor-primaria: #744680;
     --cor-secundaria: #EEEEEE;
-    --cor-terciaria: #BA8BC7;
+    --cor-terciaria: #4f2a58;
     --cor-hover: #3D4142;
 
     --font-primaria: 'Urbanist', sans-serif;
@@ -26,27 +26,38 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-image: url('../assets/cenario.svg');
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-position: top center;
     background-size: contain;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 main {
     display: flex;
-    padding: 2% 10%;
-    padding-top: calc(2% + 2rem);
+    padding: 2% 15%;
     align-items: center;
     flex-direction: column;
     row-gap: 70px;
-    margin-top: 30%;
+    margin-top: 8%;
 }
+
+/* HOME */
 
 .cabecalho {
     display: flex;
     justify-content: center;
     padding: 2% 10%;
+    align-items: center;
+}
+
+.cabecalho__logo {
+    max-width: 100px;
+    height: auto;
+    margin: 0;
 }
 
 .cabecalho__menu {
@@ -74,18 +85,23 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
+    transition: transform 0.3s, opacity 0.3s;
+    margin-top: 25%;
 }
 
 .cabecalho__menu__link.cta {
-    background-color: #4f2a58;
     color: white;
     padding: 14px 28px;
-    border-radius: 25px;
+    border-radius: 15px;
+}
+
+.cta {
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .cta:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
+    background-color: #aa67bb;
 }
 
 .cabecalho__menu__link:hover {
@@ -97,11 +113,10 @@ main {
     color: var(--cor-secundaria);
     font-family: var(--font-terciaria);
     font-weight: 400;
+    margin-top: 1%;
 }
 
-.titulo-jogo + .cta-wrapper {
-    margin-top: 20px;
-}
+/* ALGUNS ESTILOS DE TÍTULO E PARÁGRAFO */
 
 h2, h3 {
     color: var(--cor-secundaria);
@@ -111,7 +126,7 @@ h2, h3 {
     margin-bottom: 20px;
 }
 
-h2::after, h3::after, .formulario__titulo::after {
+h2::after, h3::after {
     content: '';
     display: block;
     width: 50px;
@@ -122,25 +137,39 @@ h2::after, h3::after, .formulario__titulo::after {
     left: 0;
 }
 
-.ciencia p, .sobre p {
-    color: var(--cor-secundaria);
-    font-family: var(--font-secundaria);
-    font-weight: 300;
-    font-size: 1rem;
-    background-color: var(--cor-terciaria);
-    padding: 10% 5%;
-    line-height: 1.5;
-    border-radius: 10px;
+.tutorial__texto p {
+    font-size: 1.4rem;
 }
 
 p {
     color: var(--cor-secundaria);
     font-family: var(--font-secundaria);
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 10% 5%;
     line-height: 1.5;
 }
+
+/* CONTAINERS ROXOS */
+
+.ciencia p, .sobre p {
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    font-weight: 300;
+    font-size: 1.1rem;
+    background-color: var(--cor-terciaria);
+    box-shadow: -2px 2px 5px var(--cor-hover);
+    transition: transform 0.3s, opacity 0.3s;
+    padding: 10% 5%;
+    line-height: 1.5;
+    border-radius: 10px;
+}
+
+.ciencia p:hover, .sobre p:hover {
+    transform: scale(1.05);
+}
+
+/* SOBRE, TUTORIAL E CIÊNCIA E ALGUMAS COISAS DO TÍTULO FORMULÁRIO */
 
 .sobre, .como-jogar, .ciencia, .formulario {
     display: flex;
@@ -149,12 +178,12 @@ p {
     width: 100%;
 }
 
-.jogar-titulo {
+.jogar-titulo, .formulatio-titulo {
     display: flex;
     justify-content: flex-end;
 }
 
-.jogar-titulo::after {
+.jogar-titulo::after, .formulatio-titulo::after {
     content: '';
     display: block;
     width: 50px;
@@ -163,6 +192,10 @@ p {
     position: absolute;
     bottom: -10px;
     left: 94%;
+}
+
+.formulatio-titulo::after {
+    left: 90%;
 }
 
 .sobre__content, .tutorial-content, .ciencia__content, .formulario__content, .equipe__content {
@@ -199,7 +232,7 @@ p {
 }
 
 .tutorial__imagem img {
-    max-width: 40%;
+    max-width: 35%;
     height: auto;
 }
 
@@ -214,14 +247,14 @@ p {
     text-align: left;
 }
 .tutorial__video {
-    margin-left: 20%;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 
 .como-jogar {
     background-color: var(--cor-terciaria);
     width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 5% 15%;
+    padding: 8% 25%;
     margin: 0;
 }
 
@@ -230,64 +263,200 @@ p {
     margin-top: 2%;
 }
 
+/* FORMULÁRIO */
+
 .formulario {
     background-color: var(--cor-terciaria);
     width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 14%;
-    margin: 0;
-}
-
-.formulario__titulo {
-    font-weight: 700;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.equipe {
-    padding: 20px 0;
+    padding: 5%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-direction: column;
 }
 
-.equipe__design, .equipe__front {
-    flex: 1;
+.formulario__titulo::after {
+    background-color: var(--cor-primaria);
+}
+
+.formulario__content {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
     align-items: flex-start;
-    text-align: left;
-    margin-bottom: 20px;
+    gap: 10%;
 }
 
-.equipe__jogos {
+.principal__formulario {
     flex: 1;
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: -2px 2px 5px var(--cor-hover);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.principal__formulario:hover {
+    transform: scale(1.02);
+}
+
+.formulario__campo {
+    margin-bottom: 15px;
+}
+
+.campo__etiqueta {
+    font-family: var(--font-secundaria);
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+}
+
+.campo__escrita {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    font-size: 1.1rem;
+    color: var(--cor-primaria);
+}
+
+.formulario__termos {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
     margin-bottom: 20px;
 }
 
-.equipe__dados, .equipe__back {
+.termos__input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.termos__texto {
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+}
+
+.formulario__botao {
+    width: 100%;
+    padding: 15px;
+    font-family: var(--font-terciaria);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.formulario__botao:hover {
+    background-color: #aa67bb;
+    color: var(--cor-terciaria);
+}
+
+.formulario__recuperaSenha {
+    display: flex;
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    justify-content: center;
+}
+
+.formulario__recuperaSenha:hover {
+    text-decoration: underline;
+}
+
+.descricao__formulario {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    text-align: right;
-    margin-bottom: 20px;
+    gap: 150px;
+}
+
+.imagem__formulario {
+    position: relative;
+}
+
+.imagem__formulario img {
+    max-width: 100%;
+    height: auto;
+    margin-top: -220px;
+    margin-left: 620px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* QUEM É A XP STUDIO */
+
+.equipe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: -60px;
+}
+
+.equipe__design,
+.equipe__front {
+    grid-column: 1;
+}
+
+.equipe__jogos {
+    grid-column: 2;
+}
+
+.equipe__dados,
+.equipe__back {
+    grid-column: 3;
+}
+
+.equipe h2 {
+    grid-column: 2;
+    text-align: center;
+}
+
+.equipe h2::after {
+    left: 40%;
 }
 
 .equipe__titulo {
-    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-secundaria);
+}
+
+.equipe p {
+    font-family: var(--font-secundaria);
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+    padding: 10px 2px;
 }
 
 .equipe img {
     max-width: 100px;
     height: auto;
     margin-top: 20px;
+    justify-self: center;
+    grid-column: 2 / span 1;
+    grid-row: 3;
+    margin-top: 20px;/
 }
+
+/* FOOTER */
 
 .rodape {
     display: flex;
@@ -295,4 +464,10 @@ p {
     background-color: var(--cor-hover);
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .rodape .inova {
+    max-width: 100px;
+    height: auto;
+    margin-top: 20px;
   }
