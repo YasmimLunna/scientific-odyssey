@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./assets/Logo XP.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -53,10 +54,10 @@
     </div>
     <main class="container">
         <section class="sobre" id="sobre">
-            <h2 class="titulo-secao">
+            <h2 data-aos="fade-up" class="titulo-secao">
                 Sobre
             </h2>
-            <div class="sobre__content">
+            <div data-aos="fade-up" class="sobre__content">
                 <div class="sobre__text">
                     <p>
                         Prepare-se para começar uma jornada
@@ -81,9 +82,9 @@
         </section>
 
         <section class="como-jogar" id="como-jogar">
-            <h2 class="titulo-secao jogar-titulo">Como Jogar</h2>
+            <h2 data-aos="fade-up" class="titulo-secao jogar-titulo">Como Jogar</h2>
             <div class="tutorial-content">
-                <div class="tutorial-subcontent">
+                <div data-aos="fade-up" class="tutorial-subcontent">
                     <div class="tutorial__texto">
                         <p>
                             Assista o tutorial
@@ -106,8 +107,8 @@
         </section>
 
         <section class="ciencia" id="ciencia">
-            <h2 class="titulo-secao">Você sabe o que é <br>Ciência Colaborativa?</h2>
-            <div class="ciencia__content">
+            <h2 data-aos="fade-up" class="titulo-secao">Você sabe o que é <br>Ciência Colaborativa?</h2>
+            <div data-aos="fade-up" class="ciencia__content">
                 <div class="ciencia__image">
                     <img src="assets/objetos de laboratorio.svg"
                         alt="Materiais de laboratório de Química, balão volumétrico, um microscópio e tubos de ensaio">
@@ -125,7 +126,7 @@
         </section>
 
         <section class="formulario" id="cadastro">
-            <div class="formulario__content">
+            <div data-aos="fade-up" class="formulario__content">
                 <form class="principal__formulario" data-formulario>
                     <fieldset class="formulario__campo">
                         <label class="campo__etiqueta" for="nome">Nome de usuário</label>
@@ -164,7 +165,7 @@
                     </div>
                 </form>
                 <div class="descricao__formulario">
-                    <h2 class="titulo-secao formulatio-titulo">Entre nessa jornada!</h2>
+                    <h2 data-aos="fade-up" class="titulo-secao formulatio-titulo">Entre nessa jornada!</h2>
                     <p class="formulario__texto">
                         Colete informações e itens para encontrar os experimentos!
                         Apesar do perigo, a universidade não está vazia.
@@ -180,8 +181,8 @@
             <img src="assets/rato mutante.svg" alt="Um rato roxo mutante">
         </div>
 
-        <section class="equipe" id="equipe">
-            <h2 class="titulo-secao">QUEM é a XP STUDIO?</h2>
+        <section data-aos="fade-up" class="equipe" id="equipe">
+            <h2 data-aos="fade-up" class="titulo-secao">QUEM é a XP STUDIO?</h2>
             <div class="equipe__design">
                 <h3 class="equipe__titulo">Design</h3>
                 <p>Samilla Ferreira Gusmão</p>
@@ -224,6 +225,8 @@
         <img class="inova" src="assets/Ativo 9INOVA.png" alt="Logo da Inova">
         <img src="assets/logo secti com fundo branco-08.png" alt="Logo da SECTI com fundo branco">
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/animacao-scroll.js"></script>
     <script src="./js/script.js" type="module"></script>
 </body>
 </html>
