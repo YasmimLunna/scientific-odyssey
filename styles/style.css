@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('../assets/cenario.svg');
+    background-image: url('../assets/cenario.svg'), url('../assets/tile.svg');
     background-repeat: repeat-x, repeat;
     background-position: top center, center;
     background-size: contain, contain;
@@ -310,6 +310,9 @@ p {
     background-color: var(--cor-primaria);
     position: absolute;
     bottom: -10px;
+}
+
+.jogar-titulo::after {
     left: 92%;
 }
 
@@ -684,6 +687,14 @@ fieldset {
     .formulario__content {
         flex-direction: column-reverse;
         align-items: center;
+    }
+
+    .jogar-titulo::after {
+        left: 89%;
+    }
+    
+    .formulatio-titulo::after {
+        left: 90%;
     }
   
     .tutorial__video {
