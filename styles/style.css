@@ -29,9 +29,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-image: url('../assets/cenario.svg'), url('../assets/tile.svg');
-    background-repeat: repeat-x, repeat-y;
+    background-repeat: repeat-x, repeat;
     background-position: top center, center;
-    background-size: contain, auto;
+    background-size: contain, contain;
     background-color: var(--cor-primaria);
     overflow-x: hidden;
 }
@@ -282,12 +282,8 @@ p {
 }
 
 .tutorial__imagem {
-    display: flex;
-    flex-direction: row;
-    max-width: 85%;
-    height: auto;
-    gap: 10px;
-    justify-content: center;
+    margin-top: 1%;
+    max-width: 290px;
 }
 
 .jogar-titulo, .formulatio-titulo {
