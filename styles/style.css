@@ -60,7 +60,6 @@ main {
 .cabecalho__menu {
     display: flex;
     align-items: center;
-    gap: 12px;
 }
 
 .cabecalho__menu__link {
@@ -105,6 +104,19 @@ main {
     font-family: var(--font-terciaria);
     font-weight: 400;
     margin-top: 1%;
+}
+
+.button__menu-mobile {
+    width: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    padding: 0.5rem;
+}
+
+.cabecalho__mobile {
+    display: none;
 }
 
 /* ALGUNS ESTILOS DE TÍTULO E PARÁGRAFO */
@@ -516,3 +528,53 @@ fieldset {
     height: auto;
     margin-top: 20px;
   }
+
+@media (max-width:624px) {
+    .cabecalho {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .cabecalho__menu {
+        display: none;
+    }
+
+    .button__menu-mobile {
+        display: flex;
+        width: 2.5rem;
+        height: auto;
+        font-size: 2rem;
+        background-color: transparent;
+        color: #D9D9D9;
+        justify-content: center;
+    }
+
+    .cabecalho__mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: transparent;
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    .cabecalho__mobile__list {
+        list-style-type: none;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .cabecalho__mobile__list__item {
+        width: 100%;
+        background-color: transparent;
+        margin-bottom: 1rem;
+    }
+
+    .cabecalho__menu__link {
+        padding: 0.5rem 2rem;
+    }
+    
+}

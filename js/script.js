@@ -3,6 +3,17 @@ import {validaConfirmaSenha} from "./valida-confirmaSenha.js";
 
 const camposDoFormulario = document.querySelectorAll("[required]");
 const formulario = document.querySelector("[data-formulario]");
+const buttonMenu = document.querySelector('.button__menu-mobile')
+const menuMobile = document.querySelector('.cabecalho__mobile')
+let menuOpen = false
+
+//adicionando evento de click ao botão de menu do mobile
+buttonMenu.addEventListener('click', () => {
+    menuOpen ? menuMobile.classList.add('invisible') : menuMobile.classList.remove('invisible')
+    menuOpen ? buttonMenu.children[0].setAttribute('class', 'fa-solid fa-bars') : buttonMenu.children[0].setAttribute('class', 'fa-solid fa-xmark')
+    menuOpen = !menuOpen
+})
+
 
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
