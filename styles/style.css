@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('../assets/cenario.svg'), url('../assets/tile.svg');
+    background-image: url('../assets/cenario.svg');
     background-repeat: repeat-x, repeat;
     background-position: top center, center;
     background-size: contain, contain;
@@ -531,13 +531,24 @@ fieldset {
   }
 
 @media (max-width:624px) {
+    body {
+        background-size: calc(100% + 80px) auto;
+    }
+
     .cabecalho {
         display: flex;
-        justify-content: space-around;
+        padding: 0 1rem;
+        justify-content: flex-end;
     }
 
     .cabecalho__menu {
         display: none;
+    }
+
+    .cabecalho__logo {
+        max-width: 100px;
+        margin-right: 1rem;
+        margin-left: auto;
     }
 
     .button__menu-mobile {
@@ -553,9 +564,13 @@ fieldset {
     .cabecalho__mobile {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 1rem;
-        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 1.2rem;
     }
 
     .invisible {
@@ -564,8 +579,9 @@ fieldset {
 
     .cabecalho__mobile__list {
         list-style-type: none;
-        width: 100%;
         gap: 1rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .cabecalho__mobile__list__item {
@@ -577,5 +593,189 @@ fieldset {
     .cabecalho__menu__link {
         padding: 0.5rem 2rem;
     }
+
+    .cta-wrapper {
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .titulo-jogo {
+        margin-top: 1px;
+        font-size: 1rem;
+    }
+
+    .sobre {
+        margin-top: 5%;
+    }
     
 }
+
+/* ESTILOS PARA TELAS MENORES QUE 1100PX */
+@media (max-width: 1100px) {
+    .cabecalho {
+        padding: 3% 8%;
+        justify-content: center;
+    }
+
+    .cabecalho__menu {
+        justify-content: space-between;
+        margin-right: 2%;
+    }
+  
+    .cabecalho__logo {
+      max-width: 80px;
+      margin-bottom: 10px;
+    }
+  
+    .cta-wrapper {
+      flex-direction: column;
+      margin-top: 18%;
+    }
+  
+    .cta {
+      padding: 15px;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  
+    .titulo-jogo {
+      margin-top: 2px;
+      font-size: 1.5rem;
+    }
+  
+    .sobre__text, .ciencia__texto {
+      width: 100%;
+      padding: 5%;
+    }
+  
+    .sobre__content, .ciencia__content {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .ciencia__content {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 22px;
+    }
+  
+    .sobre__images, .ciencia__image {
+      width: 90%;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .tutorial-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tutorial-subcontent {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 1px;
+        margin-bottom: 12px;
+    }
+
+    .tutorial-subcontent img {
+        width: 210px;
+    }
+
+    .formulario__content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+  
+    .tutorial__video {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    .tutorial__video video {
+      width: 100%;
+      height: auto;
+    }
+
+    .formulario__texto {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .principal__formulario {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .descricao__formulario {
+        gap: 10px;
+    }
+  
+    .imagem__formulario img {
+      max-width: 100%;
+      margin-top: -240px;
+      margin-left: 720px;
+    }
+  
+    .equipe {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        align-items: flex-start;
+        justify-items: center;
+        margin-top: -60px;
+    }
+    
+    .equipe h2 {
+        grid-column: 1 / span 3;
+        text-align: center;
+    }
+    
+    .equipe h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .equipe__design, .equipe__front, .equipe__jogos, .equipe__dados, .equipe__back {
+        grid-column: span 1;
+        justify-self: center;
+    }
+    
+    .equipe__design {
+        grid-row: 2;
+    }
+    
+    .equipe__front {
+        grid-row: 3;
+    }
+    
+    .equipe__jogos {
+        grid-row: 2;
+    }
+    
+    .equipe__dados {
+        grid-row: 2;
+    }
+    
+    .equipe__back {
+        grid-row: 3;
+    }
+    
+    .equipe img {
+        grid-column: 2 / span 1;
+        grid-row: 3;
+        justify-self: center;
+    }
+
+    .rodape {
+      flex-direction: row;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .rodape .inova {
+      margin-top: 10px;
+      max-width: 80px;
+    }
+  }  
