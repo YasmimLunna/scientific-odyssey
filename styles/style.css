@@ -28,10 +28,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('../assets/cenario.svg');
-    background-repeat: repeat-x;
-    background-position: top center;
-    background-size: contain;
+    background-image: url('../assets/cenario.svg'), url('../assets/tile.svg');
+    background-repeat: repeat-x, repeat-y;
+    background-position: top center, center;
+    background-size: contain, auto;
     background-color: var(--cor-primaria);
     overflow-x: hidden;
 }
@@ -82,11 +82,14 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 24%;
+    margin-top: 22%;
 }
 
 .cta {
-    
+    padding: 20px;
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
     transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -206,7 +209,7 @@ p {
 }
 
 .sobre {
-    margin-top: 14%;
+    margin-top: 11.5%;
 }
 
 .tutorial-content, .formulario__content {
@@ -467,6 +470,7 @@ fieldset {
 .equipe__dados,
 .equipe__back {
     grid-column: 3;
+    padding-right: 6%;
 }
 
 .equipe h2 {
@@ -487,6 +491,7 @@ fieldset {
 .equipe p {
     font-family: var(--font-secundaria);
     font-size: 1.1rem;
+    font-weight: 600;
     color: var(--cor-secundaria);
     padding: 10px 2px;
 }
