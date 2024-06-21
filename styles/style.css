@@ -760,6 +760,20 @@ fieldset {
     .equipe__front {
         grid-row: 3;
     }
+
+    .equipe__front p {
+        margin-bottom: 10px;
+    }
+    
+    .equipe__front a {
+        text-decoration: none;
+        color: #0077B5;
+        margin-left: 5px;
+    }
+    
+    .equipe__front a:hover {
+        text-decoration: underline;
+    }
     
     .equipe__jogos {
         grid-row: 2;
