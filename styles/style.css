@@ -11,13 +11,6 @@
     --font-terciaria: 'Aclonica', sans-serif;
 }
 
-.mensagem-erro {
-    color: rgb(255, 57, 57);
-    font-family: var(--font-primaria);
-    font-weight: 600;
-    font-size: 1rem;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -354,6 +347,8 @@ p {
 }
 
 .formulario__campo {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 15px;
     margin-left: 15px;
 }
@@ -374,6 +369,13 @@ p {
     font-family: var(--font-secundaria);
     font-size: 1.1rem;
     color: var(--cor-terciaria);
+}
+
+.mensagem-erro {
+    color: rgb(255, 57, 57);
+    font-family: var(--font-primaria);
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .formulario__termos {
