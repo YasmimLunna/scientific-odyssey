@@ -135,7 +135,7 @@ h2, h3 {
     font-family: var(--font-primaria);
     font-weight: 700;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 }
 
 h2::after, h3::after {
@@ -147,6 +147,11 @@ h2::after, h3::after {
     position: absolute;
     bottom: -10px;
     left: 0;
+    z-index: 999;
+}
+
+.como-jogar h2::after {
+    background-color: var(--cor-primaria);
 }
 
 .tutorial__texto p {
@@ -210,7 +215,7 @@ p {
     transform: scale(1.05);
 }
 
-/* SOBRE, TUTORIAL E CIÊNCIA E ALGUMAS COISAS DO TÍTULO FORMULÁRIO */
+/* SOBRE, TUTORIAL E CIÊNCIA E FORMULÁRIO */
 
 .sobre, .como-jogar, .ciencia, .formulario {
     display: flex;
@@ -273,7 +278,7 @@ p {
     display: flex;
     justify-content: center;
     background-color: var(--cor-terciaria);
-    padding: 5% 9% 0%;
+    padding: 4% 9% 0%;
     flex-direction: column;
     width: 100vw;
 }
@@ -289,13 +294,13 @@ p {
 
 .tutorial-subcontent {
     display: flex;
-    margin-top: -90px;
     flex-direction: column;
+    gap: 10px;
 }
 
 .tutorial__imagem {
-    margin-top: 1%;
-    max-width: 290px;
+    max-width: 250px;
+    margin-left: 50px;
 }
 
 .jogar-titulo, .formulatio-titulo {
@@ -304,40 +309,26 @@ p {
     text-align: right;
 }
 
-.jogar-titulo::after, .formulatio-titulo::after {
+.jogar-titulo::after {
     width: 80px;
     height: 6px;
-    background-color: var(--cor-primaria);
-    position: absolute;
-    bottom: -10px;
+    background-color: var(--cor-terciaria);
+    left: 77vw;
 }
-
-.jogar-titulo::after {
-    left: 92%;
-}
-
-.formulatio-titulo::after {
-    left: 84%;
-}
-
-/* FORMULÁRIO */
 
 .formulario {
     background-color: var(--cor-terciaria);
+    width: auto;
+    padding: 2% 9% 0%;
+}
+
+.formulatio-titulo::after {
+    left: 34vw;
+    background-color: var(--cor-primaria);
 }
 
 .formulario__content {
-    display: flex;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    flex-direction: row;
-    margin-top: 2%;
-    align-items: flex-start;
-    justify-content: flex-end;
-}
-
-.formulario__titulo::after {
-    background-color: var(--cor-primaria);
+    justify-content: center;
 }
 
 .principal__formulario {
@@ -414,36 +405,24 @@ p {
     color: var(--cor-terciaria);
 }
 
-.formulario__recuperaSenha {
-    display: flex;
-    font-family: var(--font-secundaria);
-    font-size: 1rem;
-    color: var(--cor-secundaria);
-    text-decoration: none;
-    justify-content: center;
-}
-
-.formulario__recuperaSenha:hover {
-    text-decoration: underline;
-}
-
 .descricao__formulario {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 80px;
+    gap: 10px;
 }
 
 .imagem__formulario {
-    position: relative;
+    display: flex;
+    align-self: center;
 }
 
 .imagem__formulario img {
-    max-width: 100%;
-    height: auto;
-    margin-top: -240px;
-    margin-left: 920px;
+    z-index: 999;
+    width: 120px;
+    margin-top: -283px;
+    margin-left: 518px;  
 }
 
 fieldset {
@@ -452,11 +431,17 @@ fieldset {
     margin: 0;
 }
 
-/* QUEM É A XP STUDIO */
+.mensagem-erro {
+    color: rgb(255, 57, 57);
+    font-family: var(--font-primaria);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* EQUIPE */
 
 .equipe {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
     gap: 20px;
     align-items: flex-start;
     padding: 20px;
@@ -536,17 +521,36 @@ fieldset {
 
 .rodape {
     display: flex;
-    padding: 24px;
-    background-color: var(--cor-hover);
     flex-direction: row;
-    justify-content: space-around;
-  }
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 9%;
+    background-color: var(--cor-terciaria);
+    width: 100vw;
+}
 
-  .rodape .inova {
-    max-width: 100px;
-    height: auto;
-    margin-top: 20px;
-  }
+.rodape p {
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+
+.rodape__redes {
+    display: flex;
+    align-items: center;
+}
+
+.rodape__redes img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.rodape__dev img {
+    width: 70px;
+    height: 70px;
+}
+
+/* MEDIA QUERIES */
 
 @media (max-width:624px) {
     body {
@@ -571,12 +575,21 @@ fieldset {
 
     .button__menu-mobile {
         display: flex;
+        position: fixed;
         width: 2.5rem;
         height: auto;
         font-size: 2rem;
         background-color: transparent;
-        color: #D9D9D9;
+        color: var(--cor-secundaria);
+        background-color: var(--cor-terciaria);
+        border-radius: 15px;
         justify-content: center;
+        z-index: 1001;
+        opacity: 50%;
+    }
+
+    .button__menu-mobile:hover {
+        opacity: 100%;
     }
 
     .cabecalho__mobile {
@@ -589,6 +602,9 @@ fieldset {
         left: 0;
         z-index: 1000;
         padding: 1.2rem;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     .invisible {
@@ -624,12 +640,24 @@ fieldset {
 
     .sobre {
         margin-top: 5%;
+        margin-bottom: -40px;
+    }
+
+    .ciencia {
+        margin-bottom: -20px;
+    }
+
+    .formulario {
+        margin-bottom: -40px;
     }
     
 }
 
-/* ESTILOS PARA TELAS MENORES QUE 1100PX */
 @media (max-width: 1100px) {
+    body {
+        background-size: calc(100% + 40px) auto;
+    }
+
     .cabecalho {
         padding: 3% 8%;
         justify-content: center;
@@ -667,12 +695,13 @@ fieldset {
     }
   
     .sobre__content, .ciencia__content {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
     .ciencia__content {
-        flex-direction: row-reverse;
+        flex-direction: column-reverse;
         align-items: center;
         gap: 22px;
     }
@@ -736,21 +765,23 @@ fieldset {
     .descricao__formulario {
         gap: 10px;
     }
-  
+
     .imagem__formulario img {
-        max-width: 100%;
-        margin-top: -240px;
-        margin-left: 720px;
+        z-index: 999;
+        width: 102px;
+        margin-top: -283px;
+        margin-left: 460px;
     }
   
     .equipe {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
         grid-template-rows: auto;
         gap: 20px;
         align-items: flex-start;
         justify-items: center;
-        margin-top: -60px;
+        margin-top: -20px;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     
     .equipe h2 {
@@ -805,3 +836,307 @@ fieldset {
       max-width: 80px;
     }
   }  
+
+@media (max-width: 565px) {
+    body {
+        background-size: calc(100% + 40px) auto;
+    }
+
+    .cabecalho {
+        padding: 3% 1rem;
+    }
+
+    .cabecalho__logo {
+        max-width: 80px;
+        margin-left: auto;
+    }
+
+    .cabecalho__menu {
+        display: none;
+    }
+
+    .button__menu-mobile {
+        display: flex;
+    }
+
+    .cta-wrapper {
+        margin-top: 10%;
+    }
+
+    .titulo-jogo {
+        font-size: 1rem;
+    }
+
+    .sobre {
+        margin-top: 5%;
+        margin-bottom: -40px;
+    }
+
+    .ciencia {
+        margin-bottom: -20px;
+    }
+
+    .formulario {
+        margin-bottom: -40px;
+    }
+
+    .sobre__text,
+    .ciencia__texto {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .tutorial__video {
+        width: 100%;
+    }
+
+    .tutorial-subcontent img {
+        width: 100%;
+    }
+
+    .imagem__formulario img {
+        display: none;
+    }
+
+    .equipe {
+        margin-top: -20px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .rodape .inova {
+        margin-top: 10px;
+        max-width: 60px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    /* Ajustes específicos para telas de iPhone (ex: iPhone 12 mini) */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .cabecalho {
+        padding: 2% 0.8rem;
+    }
+
+    .cta-wrapper {
+        margin-top: 15%;
+    }
+
+    .titulo-jogo {
+        font-size: 0.9rem;
+    }
+
+    .sobre {
+        margin-top: 8%;
+    }
+
+    .ciencia {
+        margin-bottom: -10px;
+    }
+
+    .formulario {
+        margin-bottom: -20px;
+    }
+
+    .sobre__text, .ciencia__texto {
+        padding: 3%;
+    }
+
+    .tutorial__video video {
+        width: 100%;
+        height: auto;
+    }
+
+    .tutorial-subcontent img {
+        width: 100%;
+    }
+
+    .imagem__formulario img {
+        width: 100%;
+        margin-top: -130px;
+        margin-left: 0;
+    }
+
+    .equipe {
+        gap: 8px;
+        margin-top: -10px;
+    }
+
+    .rodape {
+        padding: 0.5rem;
+    }
+
+    .rodape p {
+        font-size: 0.7rem;
+        margin-bottom: 2px;
+    }
+
+    .rodape__redes img {
+        width: 28px;
+        height: 28px;
+        margin-right: 5px;
+    }
+
+    .rodape__dev img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    /* Ajustes específicos para telas de iPhone (ex: iPhone 12, 13) */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .cabecalho {
+        padding: 2% 1rem;
+    }
+
+    .cta-wrapper {
+        margin-top: 13%;
+    }
+
+    .titulo-jogo {
+        font-size: 1rem;
+    }
+
+    .sobre {
+        margin-top: 6%;
+    }
+
+    .ciencia {
+        margin-bottom: -5px;
+    }
+
+    .formulario {
+        margin-bottom: -15px;
+    }
+
+    .sobre__text, .ciencia__texto {
+        padding: 3%;
+    }
+
+    .tutorial__video video {
+        width: 100%;
+        height: auto;
+    }
+
+    .tutorial-subcontent img {
+        width: 100%;
+    }
+
+    .imagem__formulario img {
+        width: 100%;
+        margin-top: -150px;
+        margin-left: 0;
+    }
+
+    .equipe {
+        gap: 8px;
+        margin-top: -10px;
+    }
+
+    .rodape {
+        padding: 0.5rem;
+    }
+
+    .rodape p {
+        font-size: 0.7rem;
+        margin-bottom: 2px;
+    }
+
+    .rodape__redes img {
+        width: 28px;
+        height: 28px;
+        margin-right: 5px;
+    }
+
+    .rodape__dev img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    /* Ajustes específicos para telas de Samsung (ex: Samsung Galaxy S20) */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .cabecalho {
+        padding: 2% 0.8rem;
+    }
+
+    .cta-wrapper {
+        margin-top: 15%;
+    }
+
+    .titulo-jogo {
+        font-size: 0.9rem;
+    }
+
+    .sobre {
+        margin-top: 8%;
+    }
+
+    .ciencia {
+        margin-bottom: -10px;
+    }
+
+    .formulario {
+        margin-bottom: -20px;
+    }
+
+    .sobre__text, .ciencia__texto {
+        padding: 3%;
+    }
+
+    .tutorial__video video {
+        width: 100%;
+        height: auto;
+    }
+
+    .tutorial-subcontent img {
+        width: 100%;
+    }
+
+    .imagem__formulario img {
+        width: 100%;
+        margin-top: -130px;
+        margin-left: 0;
+    }
+
+    .equipe {
+        gap: 8px;
+        margin-top: -10px;
+    }
+
+    .rodape {
+        padding: 0.5rem;
+    }
+
+    .rodape p {
+        font-size: 0.7rem;
+        margin-bottom: 2px;
+    }
+
+    .rodape__redes img {
+        width: 28px;
+        height: 28px;
+        margin-right: 5px;
+    }
+
+    .rodape__dev img {
+        width: 55px;
+        height: 55px;
+    }
+}
