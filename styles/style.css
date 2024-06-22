@@ -11,6 +11,13 @@
     --font-terciaria: 'Aclonica', sans-serif;
 }
 
+.mensagem-erro {
+    color: rgb(255, 57, 57);
+    font-family: var(--font-primaria);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -347,8 +354,6 @@ p {
 }
 
 .formulario__campo {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 15px;
     margin-left: 15px;
 }
@@ -369,13 +374,6 @@ p {
     font-family: var(--font-secundaria);
     font-size: 1.1rem;
     color: var(--cor-terciaria);
-}
-
-.mensagem-erro {
-    color: rgb(255, 57, 57);
-    font-family: var(--font-primaria);
-    font-weight: 600;
-    font-size: 1rem;
 }
 
 .formulario__termos {
@@ -472,8 +470,23 @@ fieldset {
     grid-column: 1;
 }
 
+.equipe__front p {
+    margin-bottom: 10px;
+}
+
+.equipe__front a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    margin-left: 5px;
+}
+
+.equipe__front a:hover {
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
 .equipe__design {
-    padding-right: 35px;
+    padding-right: 55px;
 }
 
 .equipe__jogos {
@@ -628,34 +641,34 @@ fieldset {
     }
   
     .cabecalho__logo {
-      max-width: 80px;
-      margin-bottom: 10px;
+        max-width: 80px;
+        margin-bottom: 10px;
     }
   
     .cta-wrapper {
-      flex-direction: column;
-      margin-top: 18%;
+        flex-direction: column;
+        margin-top: 18%;
     }
   
     .cta {
-      padding: 15px;
-      font-size: 1.2rem;
-      margin-bottom: 10px;
+        padding: 15px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
     }
   
     .titulo-jogo {
-      margin-top: 2px;
-      font-size: 1.5rem;
+        margin-top: 2px;
+        font-size: 1.5rem;
     }
   
     .sobre__text, .ciencia__texto {
-      width: 100%;
-      padding: 5%;
+        width: 100%;
+        padding: 5%;
     }
   
     .sobre__content, .ciencia__content {
-      flex-direction: row;
-      align-items: center;
+        flex-direction: row;
+        align-items: center;
     }
 
     .ciencia__content {
@@ -700,24 +713,24 @@ fieldset {
     }
   
     .tutorial__video {
-      margin-left: 0;
-      width: 100%;
+        margin-left: 0;
+        width: 100%;
     }
   
     .tutorial__video video {
-      width: 100%;
-      height: auto;
+        width: 100%;
+        height: auto;
     }
 
     .formulario__texto {
-      max-width: 100%;
-      text-align: center;
-      margin-bottom: 10px;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
     }
   
     .principal__formulario {
-      width: 100%;
-      padding: 15px;
+        width: 100%;
+        padding: 15px;
     }
   
     .descricao__formulario {
@@ -725,9 +738,9 @@ fieldset {
     }
   
     .imagem__formulario img {
-      max-width: 100%;
-      margin-top: -240px;
-      margin-left: 720px;
+        max-width: 100%;
+        margin-top: -240px;
+        margin-left: 720px;
     }
   
     .equipe {
@@ -761,20 +774,6 @@ fieldset {
     
     .equipe__front {
         grid-row: 3;
-    }
-
-    .equipe__front p {
-        margin-bottom: 10px;
-    }
-    
-    .equipe__front a {
-        text-decoration: none;
-        color: #0077B5;
-        margin-left: 5px;
-    }
-    
-    .equipe__front a:hover {
-        text-decoration: underline;
     }
     
     .equipe__jogos {
