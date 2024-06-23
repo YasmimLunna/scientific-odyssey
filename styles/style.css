@@ -268,7 +268,7 @@ p {
 }
 
 .sobre__images img, .ciencia__image img {
-    width: 100%;
+    width: auto;
     height: auto;
     max-height: 300px;
 }
@@ -759,7 +759,6 @@ fieldset {
         max-width: 100%;
         text-align: center;
         margin-bottom: 10px;
-        margin: 0 auto;
         text-wrap: balance; 
     }
   
@@ -869,12 +868,23 @@ fieldset {
         margin-top: 10%;
     }
 
+    .cta {
+        margin-top: -10px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
     .titulo-jogo {
-        font-size: 1rem;
+        font-size: 2rem;
+        text-shadow: 4px 1px 4px rgb(0 0 0);
+    }
+
+  .equipe__titulo::after {
+        left: calc(38% - 5px);
     }
 
     .sobre {
-        margin-top: 5%;
+        margin-top: 10%;
         margin-bottom: -40px;
     }
 
@@ -884,6 +894,10 @@ fieldset {
 
     .formulario {
         margin-bottom: -40px;
+    }
+
+    .principal__formulario {
+        padding: 15px 0px;
     }
 
     .sobre__text,
@@ -905,7 +919,13 @@ fieldset {
     }
 
     .equipe {
-        margin-top: -20px;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .equipe__design {
+        padding: 0;
     }
 
     .rodape {
@@ -916,6 +936,49 @@ fieldset {
     .rodape .inova {
         margin-top: 10px;
         max-width: 60px;
+    }
+
+    .jogar-titulo, .formulatio-titulo {
+        justify-content: center;
+    }
+
+    .formulatio-titulo {
+        justify-content: center;
+        margin-top: 6px;
+    }
+
+    .formulatio-titulo::after, .jogar-titulo::after {
+        left: auto;
+    }
+
+    .termos__texto {
+        text-align: center;
+    }
+
+    .termos__input {
+        margin: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    .formulario__termos {
+        white-space: pre-wrap;
+    }
+
+    .formulario__botao {
+        width: 80%;
+        padding: 15px;
+        font-family: var(--font-terciaria);
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--cor-secundaria);
+        background-color: var(--cor-terciaria);
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        margin: 0 auto 10px auto;
+        display: block;
+        white-space: pre-wrap;
     }
 }
 
@@ -931,11 +994,12 @@ fieldset {
     }
 
     .cta-wrapper {
-        margin-top: 15%;
+        margin-top: 10%;
     }
 
     .titulo-jogo {
-        font-size: 0.9rem;
+            font-size: 2rem;
+            text-shadow: 4px 1px 4px rgb(0 0 0);
     }
 
     .sobre {
@@ -1007,11 +1071,12 @@ fieldset {
     }
 
     .cta-wrapper {
-        margin-top: 13%;
+        margin-top: 12%;
     }
 
     .titulo-jogo {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        text-shadow: 4px 1px 4px rgb(0 0 0);
     }
 
     .sobre {
@@ -1024,6 +1089,11 @@ fieldset {
 
     .formulario {
         margin-bottom: -15px;
+    }
+
+    .formulatio-titulo {
+        justify-content: center;
+        margin-top: 6px;
     }
 
     .sobre__text, .ciencia__texto {
@@ -1083,11 +1153,12 @@ fieldset {
     }
 
     .cta-wrapper {
-        margin-top: 15%;
+        margin-top: 8%;
     }
 
     .titulo-jogo {
-        font-size: 0.9rem;
+        font-size: 1.4rem;
+        text-shadow: 4px 1px 4px rgb(0 0 0);
     }
 
     .sobre {
@@ -1100,6 +1171,11 @@ fieldset {
 
     .formulario {
         margin-bottom: -20px;
+    }
+
+    .formulatio-titulo {
+        justify-content: center;
+        margin-top: 6px;
     }
 
     .sobre__text, .ciencia__texto {
