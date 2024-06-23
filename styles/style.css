@@ -264,7 +264,6 @@ p {
 }
 
 .formulario__texto {
-    max-width: 70%;
     text-align: right;
 }
 
@@ -329,6 +328,7 @@ p {
 
 .formulario__content {
     justify-content: center;
+    column-gap: 15px;
 }
 
 .principal__formulario {
@@ -455,17 +455,17 @@ fieldset {
     grid-column: 1;
 }
 
-.equipe__front p {
+.equipe__front p, .equipe__design p, .equipe__jogos p, .equipe__dados p, .equipe__back p {
     margin-bottom: 10px;
 }
 
-.equipe__front a {
+.equipe__front a, .equipe__design a, .equipe__jogos a, .equipe__dados a, .equipe__back a {
     text-decoration: none;
     color: var(--cor-secundaria);
     margin-left: 5px;
 }
 
-.equipe__front a:hover {
+.equipe__front a:hover, .equipe__design a:hover, .equipe__jogos a:hover, .equipe__dados a:hover, .equipe__back a:hover {
     color: var(--cor-terciaria);
     text-decoration: none;
 }
@@ -688,6 +688,10 @@ fieldset {
         margin-top: 2px;
         font-size: 1.5rem;
     }
+
+    .sobre {
+        margin-top: 12%;
+    }
   
     .sobre__text, .ciencia__texto {
         width: 100%;
@@ -755,6 +759,8 @@ fieldset {
         max-width: 100%;
         text-align: center;
         margin-bottom: 10px;
+        margin: 0 auto;
+        text-wrap: balance; 
     }
   
     .principal__formulario {
