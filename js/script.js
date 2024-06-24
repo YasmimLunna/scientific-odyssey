@@ -46,7 +46,8 @@ formulario.addEventListener("submit", (e) => {
                 'Content-Type': 'application/json'
             }
         });
-        alert("Parabens! Você realizou seu cadastro com sucesso!");
+        alert("Parabéns! Você realizou seu cadastro com sucesso!");
+        formulario.reset();
     }
 })
 
