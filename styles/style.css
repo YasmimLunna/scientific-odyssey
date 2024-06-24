@@ -11,13 +11,6 @@
     --font-terciaria: 'Aclonica', sans-serif;
 }
 
-.mensagem-erro {
-    color: rgb(255, 57, 57);
-    font-family: var(--font-primaria);
-    font-weight: 600;
-    font-size: 1rem;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -343,8 +336,17 @@ p {
 }
 
 .formulario__campo {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 15px;
     margin-left: 15px;
+}
+
+.mensagem-erro {
+    color: rgb(255, 57, 57);
+    font-family: var(--font-primaria);
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .campo__etiqueta {
