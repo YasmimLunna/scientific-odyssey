@@ -284,11 +284,9 @@ p {
 
 .tutorial__video {
     margin-left: 10%;
-}
-
-.tutorial__video video {
-    width: 450px;
-    height: 280px;
+    width: 640px;
+    height: 360px;
+    max-width: 100%;
 }
 
 .tutorial-subcontent {
@@ -478,7 +476,11 @@ fieldset {
     grid-column: 2;
 }
 
-.equipe__dados,
+.equipe__dados {
+    grid-column: 3;
+    padding-right: 12%;
+}
+
 .equipe__back {
     grid-column: 3;
     padding-right: 6%;
@@ -643,6 +645,13 @@ fieldset {
         margin-bottom: -40px;
     }
 
+    .tutorial__video {
+        margin-left: 10%;
+        width: 450px;
+        height: 280px;
+        max-width: 100%;
+    }
+
     .ciencia {
         margin-bottom: -20px;
     }
@@ -650,6 +659,8 @@ fieldset {
     .formulario {
         margin-bottom: -40px;
     }
+
+    
     
 }
 
@@ -750,15 +761,14 @@ fieldset {
         width: 100%;
     }
   
-    .tutorial__video video {
+    .tutorial__video iframe {
         width: 100%;
-        height: auto;
     }
 
     .formulario__texto {
         max-width: 100%;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         text-wrap: balance; 
     }
   
@@ -888,6 +898,14 @@ fieldset {
         margin-bottom: -40px;
     }
 
+    .tutorial__video {
+        margin: 0 auto;
+    }
+
+    .tutorial__video iframe {
+        width: 100%;
+    }
+    
     .ciencia {
         margin-bottom: -20px;
     }
@@ -904,10 +922,6 @@ fieldset {
     .ciencia__texto {
         width: 100%;
         padding: 5%;
-    }
-
-    .tutorial__video {
-        width: 100%;
     }
 
     .tutorial-subcontent img {
@@ -928,6 +942,10 @@ fieldset {
         padding: 0;
     }
 
+    .equipe__dados {
+        padding-right: 3%;
+    }
+
     .rodape {
         flex-direction: column;
         padding: 1rem;
@@ -944,7 +962,7 @@ fieldset {
 
     .formulatio-titulo {
         justify-content: center;
-        margin-top: 6px;
+        margin-top: 10px;
     }
 
     .formulatio-titulo::after, .jogar-titulo::after {
@@ -1093,7 +1111,7 @@ fieldset {
 
     .formulatio-titulo {
         justify-content: center;
-        margin-top: 6px;
+        margin-top: 8px;
     }
 
     .sobre__text, .ciencia__texto {
