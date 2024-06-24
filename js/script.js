@@ -7,6 +7,10 @@ const buttonMenu = document.querySelector('.button__menu-mobile')
 const menuMobile = document.querySelector('.cabecalho__mobile')
 let menuOpen = false
 
+const URL_SERVIDOR = 'https://api-backend-gilt.vercel.app/usuarios';
+
+
+
 //adicionando evento de click ao botão de menu do mobile
 buttonMenu.addEventListener('click', () => {
     menuOpen ? menuMobile.classList.add('invisible') : menuMobile.classList.remove('invisible')
@@ -15,12 +19,12 @@ buttonMenu.addEventListener('click', () => {
 })
 
 
-formulario.addEventListener("submit", (e) => {
+formulario.addEventListener("submit",   async (e) => {
     e.preventDefault();
 
     //informações armazenadas quando todos os campos são preenchidos corretamente
     const listaRespostas = {
-        "nome": e.target.elements["nome"].value,
+        "nickname": e.target.elements["nome"].value,
         "email": e.target.elements["email"].value,
         "senha": e.target.elements["senha"].value,
         "confirmarSenha": e.target.elements["confirmarSenha"].value
@@ -37,19 +41,42 @@ formulario.addEventListener("submit", (e) => {
 
     // Se todos os campos são válidos, enviar os dados ao servidor
     if (formularioValido) {
-        console.log("Campos preenchidos corretamente, enviando dados:", listaRespostas);
-        // Falta adicionar o URL do servidor para enviar os dados
-        fetch('URL_DO_SERVIDOR', {
-            method: 'POST',
-            body: JSON.stringify(listaRespostas),
-            headers: {
-                'Content-Type': 'application/json'
+        try {
+            const response = await fetch(URL_SERVIDOR, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(listaRespostas),
+            });
+
+            if (!response.ok) {
+                const errorResponse = await response.json();
+                throw new Error(errorResponse.error);
             }
-        });
-        alert("Parabéns! Você realizou seu cadastro com sucesso!");
-        formulario.reset();
+
+            const newUser = await response.json();
+            console.log('Novo usuário criado:', newUser);
+            exibirMensagem("flex","blue","Conta Criada Com Sucesso!");
+
+            // Lógica adicional após criar o usuário (redirecionamento, mensagem de sucesso, etc.)
+
+        } catch (error) {
+            console.error('Erro ao criar usuário:', error);
+            exibirMensagem("flex","red",`${error.message}`);
+            //alert(`Erro ao criar usuário: ${error.message}`);
+            // Tratamento de erro (exibir mensagem para o usuário, por exemplo)
+        }
     }
-})
+});
+
+
+const exibirMensagem = (display,cor,texto) =>{
+    const mensagem = document.querySelector(".formulario__mensagem");
+    mensagem.style.display = display;
+    mensagem.innerHTML = texto;
+    mensagem.style.color = cor;
+}
 
 camposDoFormulario.forEach((campo) => {
     campo.addEventListener("blur", () => verificaCampo(campo));

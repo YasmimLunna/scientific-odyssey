@@ -17,6 +17,11 @@
     box-sizing: border-box;
 }
 
+.formulario__mensagem{
+    display: none; 
+    justify-content: center;
+}
+
 body {
     display: flex;
     flex-direction: column;
