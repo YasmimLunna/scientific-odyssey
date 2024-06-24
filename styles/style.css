@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Allerta&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --cor-primaria: #D9BF66;
+    --cor-primaria: #95BF93;
     --cor-secundaria: #ffffff;
-    --cor-terciaria: #666A73;
+    --cor-terciaria: #30478C;
     --cor-hover: #275b8a;
 
     --font-primaria: 'Urbanist', sans-serif;
@@ -88,7 +88,7 @@ main {
     padding: 20px;
     font-size: 1.5rem;
     color: var(--cor-secundaria);
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
     transition: transform 0.3s, opacity 0.3s;
 }
 
@@ -418,7 +418,7 @@ p {
 
 .imagem__formulario img {
     z-index: 999;
-    width: 120px;
+    width: 30%;
     margin-top: -283px;
     margin-left: 518px;  
 }
@@ -427,13 +427,6 @@ fieldset {
     border: none;
     padding: 0;
     margin: 0;
-}
-
-.mensagem-erro {
-    color: rgb(255, 57, 57);
-    font-family: var(--font-primaria);
-    font-weight: 600;
-    font-size: 1rem;
 }
 
 /* EQUIPE */
@@ -783,9 +776,10 @@ fieldset {
 
     .imagem__formulario img {
         z-index: 999;
-        width: 102px;
-        margin-top: -283px;
-        margin-left: 460px;
+        width: 200px;
+        height: 200px;
+        margin-top: -220px;
+        margin-left: 544px;
     }
   
     .equipe {
