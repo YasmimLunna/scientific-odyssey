@@ -2,8 +2,8 @@
 
 <em>"Prepare-se para começar uma jornada com a Dra. Carla pela Universidade Armageddon e salvá-la de experimentos altamente perigosos."</em>
 
-#### 🖥️: https://yasmimlunna.github.io/scientific-odyssey/
-![Captura de tela 2024-06-20 232316](https://github.com/YasmimLunna/scientific-odyssey/assets/27229715/c4210e35-3d20-4adc-b20f-332946ec39d8)
+#### 🖥️: https://scientific-odyssey-seven.vercel.app/
+![Captura de tela 2024-06-25 204741](https://github.com/YasmimLunna/scientific-odyssey/assets/27229715/8ff6a923-5c8c-462b-9906-4884c89f14c5)
 ___
 
  # 👥 A XP Studio |
