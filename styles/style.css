@@ -888,7 +888,7 @@ fieldset {
 
     .cta {
         margin-top: -45px;
-        padding: 5px 10px;
+        padding: 8px 10px;
         font-size: 0.9rem;
     }
 
@@ -929,7 +929,7 @@ fieldset {
     }
 
     .tutorial-subcontent img {
-        width: 100%;
+        width: 180px;
     }
 
     .imagem__formulario img {
@@ -1000,7 +1000,7 @@ fieldset {
     }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 431px) {
     /* Ajustes específicos para telas de iPhone (ex: iPhone 12, 13) */
 
     body {
@@ -1011,13 +1011,20 @@ fieldset {
         padding: 2% 1rem;
     }
 
-    .cta-wrapper {
-        margin-top: 8%;
+    .cta {
+        margin-top: 6%;
     }
 
     .titulo-logo-jogo {
-        padding-top: 4%;
-        width: 50%;    
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin-top: -13px;
+    }
+
+    .button__menu-mobile {
+        margin-left: 100px;
     }
 
     .ciencia {
@@ -1043,7 +1050,7 @@ fieldset {
     }
 
     .tutorial-subcontent img {
-        width: 100%;
+        width: 180px;
     }
 
     .imagem__formulario img {
