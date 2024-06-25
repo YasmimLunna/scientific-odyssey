@@ -79,11 +79,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .cta {
-    padding: 20px;
+    padding: 15px 20px;
     font-size: 1.5rem;
     color: var(--cor-secundaria);
     background-color: var(--cor-terciaria);
@@ -103,7 +103,8 @@ main {
     display: block;
     margin: 0 auto;
     width: 50%;
-    max-width: 400px;
+    max-width: 600px;
+    margin-top: -90px;
 }
 
 .button__menu-mobile {
@@ -635,12 +636,14 @@ fieldset {
 
     .cta-wrapper {
         flex-direction: column;
-        margin-top: 10%;
+    }
+    .cta {
+        margin-top: -50px;
     }
 
+
     .titulo-logo-jogo {
-        padding-top: 1%;
-        width: 35%;    
+        width: 60%;    
     }
 
     .sobre {
@@ -687,7 +690,7 @@ fieldset {
   
     .cta-wrapper {
         flex-direction: column;
-        margin-top: 8%;
+        margin-top: 1%;
     }
   
     .cta {
@@ -701,7 +704,7 @@ fieldset {
     }
 
     .sobre {
-        margin-top: 16%;
+        margin-top: 12%;
     }
   
     .sobre__text, .ciencia__texto {
@@ -879,9 +882,13 @@ fieldset {
         margin-top: 10%;
     }
 
+    .titulo-logo-jogo {
+        max-width: auto;
+    }
+
     .cta {
-        margin-top: -34px;
-        padding: 10px;
+        margin-top: -45px;
+        padding: 5px 10px;
         font-size: 0.9rem;
     }
 
@@ -1011,10 +1018,6 @@ fieldset {
     .titulo-logo-jogo {
         padding-top: 4%;
         width: 50%;    
-    }
-
-    .sobre {
-        margin-top: 6%;
     }
 
     .ciencia {
