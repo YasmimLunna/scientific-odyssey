@@ -103,7 +103,10 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 10%;
+    margin-top: ;
+    width: 39.6875rem;
+    padding: 20.5rem;
+
 }
 
 .button__menu-mobile {
