@@ -77,9 +77,9 @@ main {
 
 .cta-wrapper {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    margin-top: 22%;
+    margin-top: 12%;
 }
 
 .cta {
@@ -100,13 +100,10 @@ main {
 }
 
 .titulo-logo-jogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    max-width: auto;
-    padding: 0;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    max-width: 300px;
 }
 
 .button__menu-mobile {
@@ -226,7 +223,7 @@ p {
 }
 
 .sobre {
-    margin-top: 11.5%;
+    margin-top: 12%;
 }
 
 .tutorial-content, .formulario__content {
@@ -556,7 +553,7 @@ fieldset {
 
 /* MEDIA QUERIES */
 
-@media (max-width:624px) {
+@media (max-width:674px) {
     body {
         background-size: calc(100% + 80px) auto;
     }
@@ -637,9 +634,9 @@ fieldset {
         margin-top: 10%;
     }
 
-    .titulo-jogo {
-        margin-top: 1px;
-        font-size: 1rem;
+    .titulo-logo-jogo {
+        padding-top: 1%;
+        width: 35%;    
     }
 
     .sobre {
@@ -661,8 +658,6 @@ fieldset {
     .formulario {
         margin-bottom: -40px;
     }
-
-    
     
 }
 
@@ -688,7 +683,7 @@ fieldset {
   
     .cta-wrapper {
         flex-direction: column;
-        margin-top: 18%;
+        margin-top: 8%;
     }
   
     .cta {
@@ -697,13 +692,12 @@ fieldset {
         margin-bottom: 10px;
     }
   
-    .titulo-jogo {
-        margin-top: 2px;
-        font-size: 1.5rem;
+    .titulo-logo-jogo {
+        margin-top: -60px;    
     }
 
     .sobre {
-        margin-top: 12%;
+        margin-top: 16%;
     }
   
     .sobre__text, .ciencia__texto {
@@ -882,18 +876,14 @@ fieldset {
     }
 
     .cta {
-        margin-top: -10px;
+        margin-top: -30px;
         padding: 10px;
         font-size: 0.9rem;
     }
 
-    .titulo-jogo {
-        font-size: 2rem;
-        text-shadow: 4px 1px 4px rgb(0 0 0);
-    }
-
   .equipe__titulo::after {
         left: calc(38% - 5px);
+        display: none;
     }
 
     .sobre {
@@ -961,11 +951,7 @@ fieldset {
 
     .jogar-titulo, .formulatio-titulo {
         justify-content: center;
-    }
-
-    .formulatio-titulo {
-        justify-content: center;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     .formulatio-titulo::after, .jogar-titulo::after {
@@ -1003,83 +989,6 @@ fieldset {
     }
 }
 
-@media only screen and (max-width: 375px) {
-    /* Ajustes específicos para telas de iPhone (ex: iPhone 12 mini) */
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .cabecalho {
-        padding: 2% 0.8rem;
-    }
-
-    .cta-wrapper {
-        margin-top: 10%;
-    }
-
-    .titulo-jogo {
-            font-size: 2rem;
-            text-shadow: 4px 1px 4px rgb(0 0 0);
-    }
-
-    .sobre {
-        margin-top: 8%;
-    }
-
-    .ciencia {
-        margin-bottom: -10px;
-    }
-
-    .formulario {
-        margin-bottom: -20px;
-    }
-
-    .sobre__text, .ciencia__texto {
-        padding: 3%;
-    }
-
-    .tutorial__video video {
-        width: 100%;
-        height: auto;
-    }
-
-    .tutorial-subcontent img {
-        width: 100%;
-    }
-
-    .imagem__formulario img {
-        width: 100%;
-        margin-top: -130px;
-        margin-left: 0;
-    }
-
-    .equipe {
-        gap: 8px;
-        margin-top: -10px;
-    }
-
-    .rodape {
-        padding: 0.5rem;
-    }
-
-    .rodape p {
-        font-size: 0.7rem;
-        margin-bottom: 2px;
-    }
-
-    .rodape__redes img {
-        width: 28px;
-        height: 28px;
-        margin-right: 5px;
-    }
-
-    .rodape__dev img {
-        width: 55px;
-        height: 55px;
-    }
-}
-
 @media only screen and (max-width: 414px) {
     /* Ajustes específicos para telas de iPhone (ex: iPhone 12, 13) */
 
@@ -1092,12 +1001,12 @@ fieldset {
     }
 
     .cta-wrapper {
-        margin-top: 12%;
+        margin-top: 8%;
     }
 
-    .titulo-jogo {
-        font-size: 1.5rem;
-        text-shadow: 4px 1px 4px rgb(0 0 0);
+    .titulo-logo-jogo {
+        padding-top: 4%;
+        width: 50%;    
     }
 
     .sobre {
@@ -1133,88 +1042,6 @@ fieldset {
     .imagem__formulario img {
         width: 100%;
         margin-top: -150px;
-        margin-left: 0;
-    }
-
-    .equipe {
-        gap: 8px;
-        margin-top: -10px;
-    }
-
-    .rodape {
-        padding: 0.5rem;
-    }
-
-    .rodape p {
-        font-size: 0.7rem;
-        margin-bottom: 2px;
-    }
-
-    .rodape__redes img {
-        width: 28px;
-        height: 28px;
-        margin-right: 5px;
-    }
-
-    .rodape__dev img {
-        width: 55px;
-        height: 55px;
-    }
-}
-
-@media only screen and (max-width: 360px) {
-    /* Ajustes específicos para telas de Samsung (ex: Samsung Galaxy S20) */
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .cabecalho {
-        padding: 2% 0.8rem;
-    }
-
-    .cta-wrapper {
-        margin-top: 8%;
-    }
-
-    .titulo-jogo {
-        font-size: 1.4rem;
-        text-shadow: 4px 1px 4px rgb(0 0 0);
-    }
-
-    .sobre {
-        margin-top: 8%;
-    }
-
-    .ciencia {
-        margin-bottom: -10px;
-    }
-
-    .formulario {
-        margin-bottom: -20px;
-    }
-
-    .formulatio-titulo {
-        justify-content: center;
-        margin-top: 6px;
-    }
-
-    .sobre__text, .ciencia__texto {
-        padding: 3%;
-    }
-
-    .tutorial__video video {
-        width: 100%;
-        height: auto;
-    }
-
-    .tutorial-subcontent img {
-        width: 100%;
-    }
-
-    .imagem__formulario img {
-        width: 100%;
-        margin-top: -130px;
         margin-left: 0;
     }
 
