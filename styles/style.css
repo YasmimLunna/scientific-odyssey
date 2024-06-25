@@ -101,12 +101,20 @@ main {
 
 .titulo-logo-jogo {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-top: ;
-    width: 39.6875rem;
-    padding: 20.5rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 0;
+}
 
+.titulo-logo-jogo img {
+    width: 267px;
+    height: 150px;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
 }
 
 .button__menu-mobile {
