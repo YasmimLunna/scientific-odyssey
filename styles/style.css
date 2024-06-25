@@ -109,14 +109,6 @@ main {
     padding: 0;
 }
 
-.titulo-logo-jogo img {
-    width: 267px;
-    height: 150px;
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-}
-
 .button__menu-mobile {
     width: 2rem;
     background-color: transparent;
