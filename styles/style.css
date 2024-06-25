@@ -1011,6 +1011,11 @@ fieldset {
         padding: 2% 1rem;
     }
 
+    .cabecalho__logo {
+        margin-right: 0px;
+        width: 65px;
+    }
+
     .cta {
         margin-top: 6%;
     }
@@ -1024,7 +1029,7 @@ fieldset {
     }
 
     .button__menu-mobile {
-        margin-left: 100px;
+        margin-left: 200px;
     }
 
     .ciencia {
@@ -1050,7 +1055,7 @@ fieldset {
     }
 
     .tutorial-subcontent img {
-        width: 180px;
+        width: 160px;
     }
 
     .imagem__formulario img {
