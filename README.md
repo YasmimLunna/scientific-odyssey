@@ -3,7 +3,7 @@
 <em>"Prepare-se para embarcar em uma jornada com a Dra. Carla e seu estudante pela universidade, onde juntos vão revolucionar o mundo da ciência!"</em>
 
 #### 🖥️: https://scientific-odyssey-seven.vercel.app/
-![Captura de tela 2024-06-25 204741](https://github.com/YasmimLunna/scientific-odyssey/assets/27229715/8ff6a923-5c8c-462b-9906-4884c89f14c5)
+![Captura de tela 2024-06-25 205851](https://github.com/YasmimLunna/scientific-odyssey/assets/27229715/2249b6c0-d31f-48d8-8e32-a12439ecb258)
 ___
   
  # 💡 O Projeto |
